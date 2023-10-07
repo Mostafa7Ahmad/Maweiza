@@ -1,0 +1,253 @@
+@font-face {
+    font-family: "Cairo";
+    src: url("./font/Cairo-SemiBold.ttf");
+}
+
+@font-face {
+    font-family: "Quran";
+    src: url("./font/ArbFONTS-Amiri-Quran.ttf");
+}
+
+.font-quran {
+    font-family: "Quran";
+}
+
+:root {
+    --main-color: #65a30d;
+    --main-color-alt: #5b920d;
+    --transition: 0.3s;
+}
+
+* {
+    font-family: "Cairo";
+    outline: none !important;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f7f7f7;
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-track {
+    background-color: black;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);
+    transition: var(--transition);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--main-color-alt);
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.loader {
+    border-radius: 50%;
+    position: relative;
+    margin: 50px;
+    display: inline-block;
+    height: 0px;
+    width: 0px;
+}
+
+.loader span {
+    position: absolute;
+    display: block;
+    background: #ddd;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    top: -20px;
+    perspective: 100000px;
+}
+
+.loader span:nth-child(1) {
+    left: 60px;
+    animation: bounce 1s cubic-bezier(0.04, 0.35, 0, 1) infinite;
+    animation-delay: 0s;
+    background: var(--main-color);
+}
+
+.loader span:nth-child(2) {
+    left: 20px;
+    animation: bounce 1s cubic-bezier(0.04, 0.35, 0, 1) infinite;
+    animation-delay: .2s;
+    background: var(--main-color-alt);
+}
+
+.loader span:nth-child(3) {
+    left: -20px;
+    animation: bounce 1s cubic-bezier(0.04, 0.35, 0, 1) infinite;
+    animation-delay: .4s;
+    background: var(--main-color);
+}
+
+.loader span:nth-child(4) {
+    left: -60px;
+    animation: bounce 1s cubic-bezier(0.04, 0.35, 0, 1) infinite;
+    animation-delay: .6s;
+    background: var(--main-color-alt);
+}
+
+@keyframes bounce {
+
+    0%,
+    56%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    25% {
+        transform: translateY(-30px);
+    }
+}
+
+.loading {
+	-webkit-animation: spinner 1.5s linear infinite;
+	animation: spinner 1.5s linear infinite;
+}
+
+@-webkit-keyframes spinner {
+	0% {
+		-webkit-transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+	}
+}
+
+@keyframes spinner {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+nav .btn-nav.close {
+    position: relative;
+    background-color: var(--main-color-alt);
+}
+
+nav .btn-nav.close span {
+    position: absolute;
+}
+
+nav .btn-nav.close span:nth-child(1) {
+    width: 25px;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+nav .btn-nav.close span:nth-child(2) {
+    display: none;
+}
+
+nav .btn-nav.close span:nth-child(3) {
+    width: 25px;
+    top: 50%;
+    transform: translateY(-50%) rotate(318deg);
+}
+
+nav ul li a::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: 2px;
+    left: 50%;
+    background-color: var(--main-color);
+    transition: var(--transition);
+}
+
+nav ul li a:hover::before {
+    width: 100%;
+    left: 0;
+    transform: translateX(0);
+}
+
+@media (max-width: 992px) {
+    nav .btn-nav {
+        padding: 11px 13px;
+        width: 50px;
+        height: 40px;
+        background-color: var(--main-color);
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    nav ul {
+        display: block;
+        width: 100%;
+        overflow: hidden;
+        top: 127px;
+        left: 0;
+        right: 0;
+        position: fixed;
+        height: 0;
+        background-color: #19191941;
+        transition:
+            height,
+            padding var(--transition);
+        z-index: 99999;
+    }
+
+    nav ul li a {
+        display: block;
+        width: 100%;
+        font-size: 16px;
+        color: var(--main-color);
+    }
+
+    nav ul li a::before {
+        right: 0;
+    }
+
+    nav ul.show {
+        height: calc(100vh - 100px);
+        padding: 20px;
+        z-index: 9;
+        background-color: #000000c4;
+        flex-direction: column;
+    }
+}
+
+footer .box .links li a {
+    margin-right: 10px;
+}
+
+.btn-to-top.show {
+    right: 10px;
+}
+
+.btn-theme {
+    padding: 12px 15px;
+    background-color: rgb(255 255 255 / 50%);
+    font-size: 20px;
+}
+
+.hover-me {
+    transition: 0.5s;
+}
+
+.hover-me:hover {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05));
+}
