@@ -1,6 +1,6 @@
 import Landing from '@/components/Landing';
 import Salah from './components/Salah';
-import Quote from './components/quote';
+import Quote from './components/Quote';
 
 export default function Home() {
   return (
