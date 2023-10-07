@@ -2,9 +2,9 @@ import Link from "next/link";
 
 import Landing from "@/components/Landing";
 
-export default async function AdithCategories({ prams }) {
-    const AdithApi = [];
-    const categories = prams.categories;
+export default async function AdithCategories({ params }) {
+    let AdithApi = [];
+    const categories = params.categories;
 
     try {
         const response = await axios.get(`https://hadeethenc.com/api/v1/hadeeths/list/?language=ar&category_id=${categories}&per_page=1000`)

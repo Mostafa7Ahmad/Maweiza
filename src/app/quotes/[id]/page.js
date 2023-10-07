@@ -8,7 +8,7 @@ import { faCopy, faShare } from "@fortawesome/free-solid-svg-icons";
 
 import Landing from "@/components/Landing";
 
-import quotesAll from "@/json/quotesAll.json";
+import quotesAll from "../../../json/quotesAll.json";
 
 export default function QuoteAuthors({ params }) {
     const id = params.id;

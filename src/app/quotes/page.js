@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import Landing from "@/components/Landing";
 
-import quotesAll from "@/json/quotesAll.json";
+import quotesAll from "../../json/quotesAll.json";
 
 export const metadata = {
     title: 'موقع موعظه | قسم الاقتباسات',

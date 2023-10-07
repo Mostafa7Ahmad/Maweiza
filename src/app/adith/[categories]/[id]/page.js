@@ -1,10 +1,10 @@
 
 import Landing from "@/components/Landing";
 
-export default async function Adith({ prams }) {
-    const id = prams.id;
-    const AdithApi = [];
-    const hints = [];
+export default async function Adith({ params }) {
+    const id = params.id;
+    let AdithApi = [];
+    let hints = [];
 
     try {
         const response = await axios.get(`https://hadeethenc.com/api/v1/hadeeths/one/?language=ar&id=${id}`)
