@@ -9,7 +9,13 @@ import Buttons from '@/components/Buttons';
 export const metadata = {
   title: 'موقع موعظه',
   description: 'موقع إسلامي يوجد به القرآن الكريم وتفسير القران الكريم والحديث الشريف واذكار وأدعيه والاقتباسات الاسلاميه واوقات الصلاه والمزيد',
+  manifest: "/manifest.json" ,
+  keywords: "اذكار , أدعيه ,اوقات الصلاه , قران , حديث ,الاقتباسات",
+  author: "مصطفي احمد",
 }
+
+// fas fa-headphones
+// fas fa-microphone
 
 export default function RootLayout({ children }) {
   return (

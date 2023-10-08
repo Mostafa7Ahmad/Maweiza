@@ -19,11 +19,7 @@ export default function Tasbih() {
         localStorage.int = 0;
     }
     useEffect(() => {
-        if (!('int' in localStorage)) {
-            localStorage.int = 0;
-        } else {
-            setTasbih(localStorage.int);
-        }
+        (!('int' in localStorage)) ?  localStorage.int = 0 : setTasbih(localStorage.int)
     }, [])
     return (
         <>
@@ -38,7 +34,7 @@ export default function Tasbih() {
                         <FontAwesomeIcon icon={faRefresh} />
                     </span>
                     <span onClick={tasbihAdd} className="bottom-[33px] bg-black rounded-full z-20 select-none absolute cursor-pointer right-[87px] text-3xl py-8 px-12">+</span>
-                    <img loading="lazy" className="w-72 h-80  relative" src={images} alt="img" />
+                    <img loading="lazy" className="w-72 h-80 relative" src={images} alt="img" />
                 </div>
             </section>
         </>

@@ -3,15 +3,16 @@ import Landing from "@/components/Landing";
 
 export default async function Adith({ params }) {
     const id = params.id;
+
     let AdithApi = [];
     let hints = [];
 
     try {
-        const response = await axios.get(`https://hadeethenc.com/api/v1/hadeeths/one/?language=ar&id=${id}`)
-        AdithApi = response.data
+        const responseFetch = await fetch(`https://hadeethenc.com/api/v1/hadeeths/one/?language=ar&id=${id}`)
+        const response = await responseFetch.json()
+        AdithApi = response
         hints = response.data.hints.map((item, index) => <li key={index}>{item}</li>)
     } catch (error) {
-
         console.log(error);
     }
 
