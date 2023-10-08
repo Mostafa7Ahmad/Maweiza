@@ -11,7 +11,7 @@ export default async function Adith({ params }) {
         const responseFetch = await fetch(`https://hadeethenc.com/api/v1/hadeeths/one/?language=ar&id=${id}`)
         const response = await responseFetch.json()
         AdithApi = response
-        hints = response.data.hints.map((item, index) => <li key={index}>{item}</li>)
+        hints = response.hints.map((item, index) => <li key={index}>{item}</li>)
     } catch (error) {
         console.log(error);
     }

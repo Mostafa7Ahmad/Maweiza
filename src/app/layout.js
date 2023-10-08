@@ -33,5 +33,3 @@ export default function RootLayout({ children }) {
     </html>
   )
 }
-
-serviceWorkerRegistration.register()
