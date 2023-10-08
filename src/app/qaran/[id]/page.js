@@ -1,3 +1,4 @@
+"use client";
 
 import AudioPlayer from 'react-h5-audio-player';
 import '../../audio.css';
