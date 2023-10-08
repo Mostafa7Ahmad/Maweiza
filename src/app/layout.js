@@ -6,8 +6,6 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Buttons from '@/components/Buttons';
 
-import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
-
 export const metadata = {
   title: 'موقع موعظه',
   description: 'موقع إسلامي يوجد به القرآن الكريم وتفسير القران الكريم والحديث الشريف واذكار وأدعيه والاقتباسات الاسلاميه واوقات الصلاه والمزيد',
