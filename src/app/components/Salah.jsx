@@ -129,11 +129,11 @@ export default function Salah() {
                     const data = await response.json();
                     let timings = data.data.timings;
                     setTimings({
-                        Fajr: moment(timings.Fajr, ["HH:mm"]).format("hh:mm A"),
-                        Dhuhr: moment(timings.Dhuhr, ["HH:mm"]).format("hh:mm A"),
-                        Asr: moment(timings.Asr, ["HH:mm"]).format("hh:mm A"),
-                        Sunset: moment(timings.Maghrib, ["HH:mm"]).format("hh:mm A"),
-                        Isha: moment(timings.Isha, ["HH:mm"]).format("hh:mm A")
+                        Fajr: timings.Fajr,
+                        Dhuhr: timings.Dhuhr,
+                        Asr: timings.Asr,
+                        Sunset: timings.Maghrib,
+                        Isha: timings.Isha, 
                     })
                 } catch (error) {
                     toast.error("تحقق من اتصال الانترنت", {
@@ -199,23 +199,23 @@ export default function Salah() {
                         <div className="container m-auto grid lg:grid-cols-5 md:grid-cols-3 gap-10 justify-center">
                             <div className="p-5 w-28 h-28 m-auto transition-colors bg-white dark:bg-black rounded-full border-lime-600 border-4 border-solid text-center flex flex-col justify-center">
                                 <span className="block"> الفجر </span>
-                                <span className="block"> {timings.Fajr} </span>
+                                <span className="block"> {moment(timings.Fajr, ["HH:mm"]).format("hh:mm A")} </span>
                             </div>
                             <div className="p-5 w-28 h-28 m-auto transition-colors bg-white dark:bg-black rounded-full border-lime-600 border-4 border-solid text-center flex flex-col justify-center">
                                 <span className="block"> الظهر </span>
-                                <span className="block"> {timings.Dhuhr} </span>
+                                <span className="block"> {moment(timings.Dhuhr, ["HH:mm"]).format("hh:mm A")} </span>
                             </div>
                             <div className="p-5 w-28 h-28 m-auto transition-colors bg-white dark:bg-black rounded-full border-lime-600 border-4 border-solid text-center flex flex-col justify-center">
                                 <span className="block"> العصر </span>
-                                <span className="block"> {timings.Asr} </span>
+                                <span className="block"> {moment(timings.Asr, ["HH:mm"]).format("hh:mm A")} </span>
                             </div>
                             <div className="p-5 w-28 h-28 m-auto transition-colors bg-white dark:bg-black rounded-full border-lime-600 border-4 border-solid text-center flex flex-col justify-center">
                                 <span className="block"> المغرب </span>
-                                <span className="block"> {timings.Sunset} </span>
+                                <span className="block"> {moment(timings.Sunset, ["HH:mm"]).format("hh:mm A")} </span>
                             </div>
                             <div className="p-5 w-28 h-28 m-auto transition-colors bg-white dark:bg-black rounded-full border-lime-600 border-4 border-solid text-center flex flex-col justify-center">
                                 <span className="block"> العشاء </span>
-                                <span className="block"> {timings.Isha} </span>
+                                <span className="block"> {moment(timings.Isha, ["HH:mm"]).format("hh:mm A")} </span>
                             </div>
                         </div>
 
