@@ -11,7 +11,7 @@ export default function Custom500() {
                         <p className="font-light text-gray-500 dark:text-gray-400 mb-2">
                             تواصل مع مطور الموقع اذا استمرت هذه المشكله
                         </p>
-                        <Link to="/" className="inline-flex text-white bg-lime-600 hover:bg-lime-700 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:focus:ring-primary-900 my-4">
+                        <Link href="/" className="inline-flex text-white bg-lime-600 hover:bg-lime-700 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:focus:ring-primary-900 my-4">
                             العوده الي الصفحه الرئيسيه
                         </Link>
                     </div>
