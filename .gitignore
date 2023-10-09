@@ -35,13 +35,19 @@ yarn-error.log*
 next-env.d.ts
 
 # PWA files
-**/public/precache.*.*.js
-**/public/sw.js
-**/public/workbox-*.js
-**/public/worker-*.js
-**/public/fallback-*.js
-**/public/precache.*.*.js.map
-**/public/sw.js.map
-**/public/workbox-*.js.map
-**/public/worker-*.js.map
-**/public/fallback-*.js
+precache.*.*.js
+precache.*.*.js.map
+
+sw.js
+sw.js.map
+
+service-worker.js
+
+workbox-*.js
+workbox-*.js.
+
+worker-*.js
+worker-*.js.map
+
+fallback-*.js
+fallback-*.js.map

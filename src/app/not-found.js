@@ -1,6 +1,7 @@
+
 import Link from "next/link";
 
-export default function Custom404() {
+export default function NotFound() {
     return (
         <>
             <section className="pt-52 pb-5">
@@ -11,7 +12,7 @@ export default function Custom404() {
                         <p className="mb-4 text-lg font-light text-gray-500 dark:text-gray-400">
                         لم يتم العثور علي هذه الصفحه 
                         </p>
-                        <Link href="/" className="inline-flex text-white bg-lime-600 hover:bg-lime-700 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:focus:ring-primary-900 my-4">
+                        <Link href="/" className="inline-flex text-white bg-lime-600 hover:bg-lime-700 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center my-4">
                             العوده الي الصفحه الرئيسيه
                         </Link>
                     </div>

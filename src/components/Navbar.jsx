@@ -1,20 +1,15 @@
 "use client";
 
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 import Link from "next/link";
 import Image from "next/image";
 
 import { links } from "./links";
-import { Menu } from "../context/MenuContext";
 
-function Navbar() {
+export default function Navbar() {
     const [menuButton, setMenuButton] = useState(["", ""]);
-
-    const menuContext = useContext(Menu);
-    
-    const isOpen = menuContext.isOpen;
-    const setIsOpen = menuContext.setIsOpen;
+    const [isOpen, setIsOpen] = useState(false);
 
     useEffect(() =>
         (isOpen) ? setMenuButton(["close", "show"]) : setMenuButton(["", ""])
@@ -27,6 +22,7 @@ function Navbar() {
             </Link>
         </li>
     )
+    
     return (
         <>
             <nav className="fixed top-0 right-0 left-0 z-40 h-0">
@@ -52,5 +48,3 @@ function Navbar() {
         </>
     );
 }
-
-export default Navbar;

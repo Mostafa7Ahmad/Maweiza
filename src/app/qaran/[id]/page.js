@@ -8,16 +8,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCog } from '@fortawesome/free-solid-svg-icons';
 
 export default async function Qaran({ params }) {
+
     const idRecitations = 1;
-
     const id = params.id;
-
     let dataSuaruh = [];
-
     let dataAyah = [];
-
     let dataAudio = [];
-
     let dataRecitations = '';
 
     try {
