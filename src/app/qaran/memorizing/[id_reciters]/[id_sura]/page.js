@@ -61,11 +61,11 @@ export default function Qaran({ params }) {
         fetchDataApi2()
     }, [id])
 
-    let ShowDataMap = dataAyah.map((aya, key) => <span onClick={() => play(aya.numberInSurah)}><Aya key={key} aya={aya} ayah={ayah} /></span>)
+    let ShowDataMap = dataAyah.map((aya, key) => <span key={key} onClick={() => play(aya.numberInSurah)}><Aya aya={aya} ayah={ayah} /></span>)
 
     function ended() {
         try {
-            ShowDataMap = dataAyah.map((aya, key) => <span onClick={() => play(aya.numberInSurah)}><Aya key={key} aya={aya} ayah={ayah} /></span>)
+            ShowDataMap = dataAyah.map((aya, key) => <span key={key} onClick={() => play(aya.numberInSurah)}><Aya aya={aya} ayah={ayah} /></span>)
             setAyah(ayah + 1)
         } catch (error) {
             console.log(error);
@@ -74,7 +74,7 @@ export default function Qaran({ params }) {
 
     function play(ayah) {
         try {
-            ShowDataMap = dataAyah.map((aya, key) => <span onClick={() => play(aya.numberInSurah)}><Aya key={key} aya={aya} ayah={ayah} /></span>)
+            ShowDataMap = dataAyah.map((aya, key) => <span key={key} onClick={() => play(aya.numberInSurah)}><Aya aya={aya} ayah={ayah} /></span>)
             setAyah(ayah)
         } catch (error) {
             console.log(error);
@@ -83,7 +83,7 @@ export default function Qaran({ params }) {
 
     function clickNext() {
         try {
-            ShowDataMap = dataAyah.map((aya, key) => <span onClick={() => play(aya.numberInSurah)}><Aya key={key} aya={aya} ayah={ayah} /></span>)
+            ShowDataMap = dataAyah.map((aya, key) => <span key={key} onClick={() => play(aya.numberInSurah)}><Aya aya={aya} ayah={ayah} /></span>)
             setAyah(ayah + 1)
         } catch (error) {
             console.log(error);
@@ -92,7 +92,7 @@ export default function Qaran({ params }) {
 
     function clickPrevious() {
         try {
-            ShowDataMap = dataAyah.map((aya, key) => <Aya onClick={() => play(aya.numberInSurah)} key={key} aya={aya} ayah={ayah} />)
+            ShowDataMap = dataAyah.map((aya, key) => <span key={key} onClick={() => play(aya.numberInSurah)}><Aya aya={aya} ayah={ayah} /></span>)
             setAyah(ayah - 1)
         } catch (error) {
             console.log(error);
