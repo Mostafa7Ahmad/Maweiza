@@ -25,7 +25,7 @@ export default async function AlQaran() {
 
     return (
         <>
-            <Landing title="قسم الاستماع لتلاوه القران الكريم" text="" />
+            <Landing title="قسم حفظ القران الكريم" text="" />
             <section className="pt-20 pb-20 relative">
                 <h2 className="text-2xl mb-10 w-fit m-auto relative before:w-10 before:bg-lime-600 before:h-1 before:absolute before:top-1/2 before:right-full before:-translate-x-5 after:w-10 after:bg-lime-600 after:h-1 after:absolute after:top-1/2 after:left-full after:translate-x-5">
                     اختر القارئ
