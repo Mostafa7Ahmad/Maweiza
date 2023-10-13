@@ -136,10 +136,6 @@
 	}
 }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 nav .btn-nav.close {
     position: relative;
     background-color: var(--main-color-alt);
@@ -251,3 +247,7 @@ footer .box .links li a {
 .hover-me:hover {
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05));
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

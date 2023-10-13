@@ -1,39 +1,39 @@
 "use client";
 
 import AudioPlayer from 'react-h5-audio-player';
-import '../../audio.css';
+import '@/app/audio.css';
 
 import Landing from "@/components/Landing";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCog } from '@fortawesome/free-solid-svg-icons';
 
 export default async function Qaran({ params }) {
 
-    const idRecitations = 1;
-    const id = params.id;
+    const idRecitations = params.id_reciters;
+    const id = params.id_sura;
+
     let dataSuaruh = [];
     let dataAyah = [];
-    let dataAudio = [];
+
     let dataRecitations = '';
+    
+    let dataAudio = [];
 
     try {
         const responseSuaruh = await fetch(`https://api.alquran.cloud/v1/surah/${id}`)
         const dataSuaruhJson = await responseSuaruh.json();
         const suaruhData = dataSuaruhJson.data
+
         dataAyah = suaruhData.ayahs;
         dataSuaruh = suaruhData;
 
-        const responseFileAudio = await fetch(`https://api.quran.com/api/v4/chapter_recitations/${idRecitations}/${id}`)
+        const responseFileAudio = await fetch(`https://abdoahmed26.github.io/api/arabic.json`)
         const dataFileAudio = await responseFileAudio.json();
-        dataAudio = dataFileAudio.audio_file;
+        const dataFileAudioFilter = dataFileAudio.reciters.filter((recitations) => (recitations.id === idRecitations))[0];
 
-        const responseRecitation = await fetch(`https://api.quran.com/api/v4/resources/recitations?language=ar`)
-        const dataRecitationJson = await responseRecitation.json();
-        dataRecitations = dataRecitationJson.recitations.filter((recitations) => (recitations.id === idRecitations) ? recitations : "")[0].translated_name.name;
+        dataAudio = `${dataFileAudioFilter.Server}/${id.toString().padStart(3, '0')}.mp3`
+        dataRecitations = dataFileAudioFilter.name
     } catch (error) {
         console.log(error);
     }
-
     const showData = dataAyah.map((aya) =>
         <span className="leading-[65px]" key={aya.number}>
             <span className="font-quran text-xl md:text-2xl">
@@ -54,7 +54,7 @@ export default async function Qaran({ params }) {
                 <div className="bg-white py-10 px-10 mb-20 dark:bg-black w-full">
                     <h1 className="m-auto text-center my-5 text-2xl font-quran">{dataSuaruh.name}</h1>
                     <p className="m-auto text-center text-xl"> بصوت الشيخ {dataRecitations}</p>
-                    <AudioPlayer src={dataAudio.audio_url} />
+                    <AudioPlayer autoPlay loop src={dataAudio} />
                 </div>
                 {
                     (id !== "9") ? <h4 className="text-2xl font-quran mb-7 w-fit m-auto">بِسۡمِ ٱللَّهِ ٱلرَّحۡمَـٰنِ ٱلرَّحِیمِ</h4> : ""

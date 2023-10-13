@@ -1,0 +1,34 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "name_ar": "مشارى راشد العفاسى",
+            "name_en": "alafasy"
+        },
+        {
+            "id": 2,
+            "name_ar": "أحمد العجمي",
+            "name_en": "ahmedajamy"
+        },
+        {
+            "id": 3,
+            "name_ar": "الحصري",
+            "name_en": "husarymujawwad"
+        },
+        {
+            "id": 4,
+            "name_ar": "محمد صديق المنشاوى",
+            "name_en": "minshawi"
+        },
+        {
+            "id": 5,
+            "name_ar": "محمد ايوب",
+            "name_en": "muhammadayyoub"
+        },
+        {
+            "id": 6,
+            "name_ar": "محمد جبريل",
+            "name_en": "muhammadjibreel"
+        }
+    ]
+}
