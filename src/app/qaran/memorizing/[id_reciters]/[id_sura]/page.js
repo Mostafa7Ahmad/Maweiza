@@ -30,21 +30,18 @@ export default function Qaran({ params }) {
     const [nameEn, setNameEn] = useState("")
 
     const [dataSuaruh, setDataSuaruh] = useState("")
-
-    useEffect(() => {
-        let recitation = memorizingAll.data.filter((recitations) => (recitations.id.toString() === idRecitations.toString()))[0]
-        setNameEn(recitation.name_en)
-        setDataRecitations(recitation.name_ar)
-    }, [idRecitations])
-
+    
     useEffect(() => {
         async function fetchDataApi1() {
+            let recitation = memorizingAll.data.filter((recitations) => (recitations.id.toString() === idRecitations.toString()))[0]
+            setNameEn(recitation.name_en)
+            setDataRecitations(recitation.name_ar)
             const response = await fetch(`https://quran-api-id.vercel.app/surahs/${id}/ayahs/${ayah}`)
             const suaruhAudioJson = await response.json();
             setDataAudio(suaruhAudioJson.audio[recitation.name_en])
         }
         fetchDataApi1()
-    }, [id, idRecitations, ayah])
+    }, [id, idRecitations])
 
     useEffect(() => {
         async function fetchDataApi2() {
@@ -63,36 +60,48 @@ export default function Qaran({ params }) {
 
     let ShowDataMap = dataAyah.map((aya, key) => <span key={key} onClick={() => play(aya.numberInSurah)}><Aya aya={aya} ayah={ayah} /></span>)
 
-    function ended() {
+    async function ended() {
         try {
-            ShowDataMap = dataAyah.map((aya, key) => <span key={key} onClick={() => play(aya.numberInSurah)}><Aya aya={aya} ayah={ayah} /></span>)
+            const response = await fetch(`https://quran-api-id.vercel.app/surahs/${id}/ayahs/${ayah + 1}`)
+            const suaruhAudioJson = await response.json();
+            setDataAudio(suaruhAudioJson.audio[nameEn])
+            ShowDataMap = dataAyah.map((aya, key) => <span key={key} onClick={() => play(aya.numberInSurah)}><Aya aya={aya} ayah={ayah + 1} /></span>)
             setAyah(ayah + 1)
         } catch (error) {
             console.log(error);
         }
     }
 
-    function play(ayah) {
+    async function play(ayaNaw) {
         try {
-            ShowDataMap = dataAyah.map((aya, key) => <span key={key} onClick={() => play(aya.numberInSurah)}><Aya aya={aya} ayah={ayah} /></span>)
-            setAyah(ayah)
+            const response = await fetch(`https://quran-api-id.vercel.app/surahs/${id}/ayahs/${ayaNaw + 1}`)
+            const suaruhAudioJson = await response.json();
+            setDataAudio(suaruhAudioJson.audio[nameEn])
+            ShowDataMap = dataAyah.map((aya, key) => <span key={key} onClick={() => play(aya.numberInSurah)}><Aya aya={ayaNaw} ayah={ayah + 1} /></span>)
+            setAyah(ayaNaw)
         } catch (error) {
             console.log(error);
         }
     }
 
-    function clickNext() {
+    async function clickNext() {
         try {
-            ShowDataMap = dataAyah.map((aya, key) => <span key={key} onClick={() => play(aya.numberInSurah)}><Aya aya={aya} ayah={ayah} /></span>)
+            const response = await fetch(`https://quran-api-id.vercel.app/surahs/${id}/ayahs/${ayah + 1}`)
+            const suaruhAudioJson = await response.json();
+            setDataAudio(suaruhAudioJson.audio[nameEn])
+            ShowDataMap = dataAyah.map((aya, key) => <span key={key} onClick={() => play(aya.numberInSurah)}><Aya aya={aya} ayah={ayah + 1} /></span>)
             setAyah(ayah + 1)
         } catch (error) {
             console.log(error);
         }
     }
 
-    function clickPrevious() {
+    async function clickPrevious() {
         try {
-            ShowDataMap = dataAyah.map((aya, key) => <span key={key} onClick={() => play(aya.numberInSurah)}><Aya aya={aya} ayah={ayah} /></span>)
+            const response = await fetch(`https://quran-api-id.vercel.app/surahs/${id}/ayahs/${ayah - 1}`)
+            const suaruhAudioJson = await response.json();
+            setDataAudio(suaruhAudioJson.audio[nameEn])
+            ShowDataMap = dataAyah.map((aya, key) => <span key={key} onClick={() => play(aya.numberInSurah)}><Aya aya={aya} ayah={ayah - 1} /></span>)
             setAyah(ayah - 1)
         } catch (error) {
             console.log(error);
