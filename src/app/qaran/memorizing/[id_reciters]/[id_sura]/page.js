@@ -74,10 +74,10 @@ export default function Qaran({ params }) {
 
     async function play(ayaNaw) {
         try {
-            const response = await fetch(`https://quran-api-id.vercel.app/surahs/${id}/ayahs/${ayaNaw + 1}`)
+            const response = await fetch(`https://quran-api-id.vercel.app/surahs/${id}/ayahs/${ayaNaw}`)
             const suaruhAudioJson = await response.json();
             setDataAudio(suaruhAudioJson.audio[nameEn])
-            ShowDataMap = dataAyah.map((aya, key) => <span key={key} onClick={() => play(aya.numberInSurah)}><Aya aya={ayaNaw} ayah={ayah + 1} /></span>)
+            ShowDataMap = dataAyah.map((aya, key) => <span key={key} onClick={() => play(aya.numberInSurah)}><Aya aya={aya} ayah={ayaNaw} /></span>)
             setAyah(ayaNaw)
         } catch (error) {
             console.log(error);
