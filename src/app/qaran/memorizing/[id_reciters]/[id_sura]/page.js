@@ -44,7 +44,7 @@ export default function Qaran({ params }) {
             setDataAudio(suaruhAudioJson.audio[recitation.name_en])
         }
         fetchDataApi1()
-    }, [id, idRecitations])
+    }, [id, idRecitations, ayah])
 
     useEffect(() => {
         async function fetchDataApi2() {
@@ -52,10 +52,8 @@ export default function Qaran({ params }) {
                 const responseSuaruh = await fetch(`https://api.alquran.cloud/v1/surah/${id}`)
                 const dataSuaruhJson = await responseSuaruh.json();
                 const suaruhData = dataSuaruhJson.data
-
                 setDataAyah(suaruhData.ayahs);
                 setDataSuaruh(suaruhData);
-
             } catch (error) {
                 console.log(error);
             }
@@ -65,48 +63,36 @@ export default function Qaran({ params }) {
 
     let ShowDataMap = dataAyah.map((aya, key) => <span onClick={() => play(aya.numberInSurah)}><Aya key={key} aya={aya} ayah={ayah} /></span>)
 
-    async function ended() {
+    function ended() {
         try {
-            const response = await fetch(`https://quran-api-id.vercel.app/surahs/${id}/ayahs/${ayah + 1}`)
-            const suaruhAudioJson = await response.json();
             ShowDataMap = dataAyah.map((aya, key) => <span onClick={() => play(aya.numberInSurah)}><Aya key={key} aya={aya} ayah={ayah} /></span>)
-            setDataAudio(suaruhAudioJson.audio[nameEn])
             setAyah(ayah + 1)
         } catch (error) {
             console.log(error);
         }
     }
 
-    async function play(ayah) {
+    function play(ayah) {
         try {
-            const response = await fetch(`https://quran-api-id.vercel.app/surahs/${id}/ayahs/${ayah}`)
-            const suaruhAudioJson = await response.json();
             ShowDataMap = dataAyah.map((aya, key) => <span onClick={() => play(aya.numberInSurah)}><Aya key={key} aya={aya} ayah={ayah} /></span>)
-            setDataAudio(suaruhAudioJson.audio[nameEn])
             setAyah(ayah)
         } catch (error) {
             console.log(error);
         }
     }
 
-    async function clickNext() {
+    function clickNext() {
         try {
-            const response = await fetch(`https://quran-api-id.vercel.app/surahs/${id}/ayahs/${ayah + 1}`)
-            const suaruhAudioJson = await response.json();
             ShowDataMap = dataAyah.map((aya, key) => <span onClick={() => play(aya.numberInSurah)}><Aya key={key} aya={aya} ayah={ayah} /></span>)
-            setDataAudio(suaruhAudioJson.audio[nameEn])
             setAyah(ayah + 1)
         } catch (error) {
             console.log(error);
         }
     }
 
-    async function clickPrevious() {
+    function clickPrevious() {
         try {
-            const response = await fetch(`https://quran-api-id.vercel.app/surahs/${id}/ayahs/${ayah - 1}`)
-            const suaruhAudioJson = await response.json();
             ShowDataMap = dataAyah.map((aya, key) => <Aya onClick={() => play(aya.numberInSurah)} key={key} aya={aya} ayah={ayah} />)
-            setDataAudio(suaruhAudioJson.audio[nameEn])
             setAyah(ayah - 1)
         } catch (error) {
             console.log(error);
