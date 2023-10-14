@@ -8,7 +8,7 @@ export const metadata = {
     description: 'يحتوي هذا القسم علي الكثير من الاذكار والادعيه المختلفه',
 }
 
-export default async function AlAzekar() {
+export default async function () {
     let dataAzekar = [];
 
     try {

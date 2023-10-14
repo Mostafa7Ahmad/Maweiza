@@ -10,7 +10,7 @@ import Aya from './Aya';
 
 import memorizingAll from "@/json/memorizingAll.json";
 
-export default function Qaran({ params }) {
+export default function ({ params }) {
 
     const idRecitations = params.id_reciters;
     const id = params.id_sura;

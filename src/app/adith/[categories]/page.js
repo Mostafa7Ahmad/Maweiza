@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import Landing from "@/components/Landing";
 
-export default async function AdithCategories({ params }) {
+export default async function ({ params }) {
     let AdithApi = [];
     const categories = params.categories;
 

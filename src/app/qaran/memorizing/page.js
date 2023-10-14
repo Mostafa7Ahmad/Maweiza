@@ -5,12 +5,7 @@ import Landing from "@/components/Landing";
 
 import memorizingAll from "@/json/memorizingAll.json";
 
-export const metadata = {
-    title: 'موقع موعظه | قسم القران الكريم',
-    description: 'يحتوي هذا القسم علي جميع سور القران الكريم',
-}
-
-export default async function AlQaran() {
+export default async function () {
     let reciters = [];
 
     reciters = memorizingAll.data;

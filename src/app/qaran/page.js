@@ -6,10 +6,10 @@ import { faHeadphonesSimple, faMicrophoneLines } from "@fortawesome/free-solid-s
 
 export const metadata = {
     title: 'موقع موعظه | قسم القران الكريم',
-    description: 'يحتوي هذا القسم علي جميع سور القران الكريم',
+    description: 'يحتوي هذا القسم علي جميع سور القران الكريم مع وضعين' ,
 }
 
-export default async function AlQaran() {
+export default async function () {
     return (
         <>
             <Landing title="قسم القران الكريم" text="" />

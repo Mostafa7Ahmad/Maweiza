@@ -5,7 +5,7 @@ import '@/app/audio.css';
 
 import Landing from "@/components/Landing";
 
-export default async function Qaran({ params }) {
+export default async function ({ params }) {
 
     const idRecitations = params.id_reciters;
     const id = params.id_sura;

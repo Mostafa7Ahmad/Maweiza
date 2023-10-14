@@ -10,7 +10,7 @@ import "moment/dist/locale/ar-dz";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-import Loader from "../../components/Loader";
+import Loader from "@/components/Loader";
 
 moment.locale("ar");
 
@@ -225,8 +225,8 @@ export default function Salah() {
 
                         <div className="container gap-5 flex justify-center max-sm:flex-col m-auto px-3">
                             <div className="max-sm:m-auto px-6 py-6 mb-3 w-32 font-quran border-4 border-solid border-lime-600 text-center">
-                                <h3 className="text-4xl pb-5 border-b mb-5 border-lime-600">{remainingTime.s}</h3>
-                                <p className="text-xl">ثانيه</p>
+                                <h3 className="text-4xl pb-5 border-b mb-5 border-lime-600">{remainingTime.h}</h3>
+                                <p className="text-xl">ساعه</p>
                             </div>
 
                             <div className="max-sm:m-auto px-6 py-6 mb-3 w-32 font-quran border-4 border-solid border-lime-600 text-center">
@@ -235,8 +235,8 @@ export default function Salah() {
                             </div>
 
                             <div className="max-sm:m-auto px-6 py-6 mb-3 w-32 font-quran border-4 border-solid border-lime-600 text-center">
-                                <h3 className="text-4xl pb-5 border-b mb-5 border-lime-600">{remainingTime.h}</h3>
-                                <p className="text-xl">ساعه</p>
+                                <h3 className="text-4xl pb-5 border-b mb-5 border-lime-600">{remainingTime.s}</h3>
+                                <p className="text-xl">ثانيه</p>
                             </div>
                         </div>
 

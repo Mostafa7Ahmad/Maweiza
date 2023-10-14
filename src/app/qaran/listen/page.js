@@ -3,12 +3,7 @@ import Image from "next/image";
 
 import Landing from "@/components/Landing";
 
-export const metadata = {
-    title: 'موقع موعظه | قسم القران الكريم',
-    description: 'يحتوي هذا القسم علي جميع سور القران الكريم',
-}
-
-export default async function AlQaran() {
+export default async function () {
     let reciters = [];
 
     try {

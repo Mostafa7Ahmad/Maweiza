@@ -1,7 +1,9 @@
 import { redirect } from "next/navigation";
 
 export default async function () {
-    redirect("/khotab/1");
+    
+    redirect("/videos/1");
+
     return (
         <section className="pt-52 pb-5">
             <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">

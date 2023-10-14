@@ -8,7 +8,7 @@ export const metadata = {
     description: 'يحتوي هذا القسم علي الكثير من الاحاديث النبويه مع عرذ جميع معلومات الحديث',
 }
 
-export default async function AlAdith() {
+export default async function () {
     let adithApi = [];
 
     try {

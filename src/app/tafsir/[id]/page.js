@@ -1,6 +1,6 @@
 import Landing from "@/components/Landing";
 
-export default async function Tafsir({ params }) {
+export default async function ({ params }) {
     const id = params.id;
 
     let dataSuaruh = [];

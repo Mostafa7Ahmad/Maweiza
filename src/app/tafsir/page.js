@@ -8,7 +8,7 @@ export const metadata = {
     description: 'يحتوي هذا القسم علي تفسير جميع سور القران الكريم',
 }
 
-export default async function AlTafsir() {
+export default async function () {
     let Surs = [];
 
     try {

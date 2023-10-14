@@ -47,3 +47,17 @@ https://api3.islamhouse.com/v3/paV29H2gm56kvLPy/main/khotab/ar/ar/1/10000/json
 
 مقالات
 https://api3.islamhouse.com/v3/paV29H2gm56kvLPy/main/articles/ar/ar/1/1000/json
+
+
+محاضرات صوتيه
+https://api3.islamhouse.com/v3/paV29H2gm56kvLPy/main/audios/ar/ar/1/25/json
+
+
+محاضرات فديو
+https://api3.islamhouse.com/v3/paV29H2gm56kvLPy/main/videos/ar/ar/1/25/json
+
+
+
+
+
+#f7f9fb

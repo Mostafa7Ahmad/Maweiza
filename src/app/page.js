@@ -1,7 +1,7 @@
 import Landing from '@/components/Landing';
-import Salah from './components/Salah';
-import Quote from './components/Quote';
-import Categories from './components/Categories';
+import Salah from '@/components/Salah';
+import Quote from '@/components/Quote';
+import Categories from '@/components/Categories';
 
 export default function Home() {
   return (

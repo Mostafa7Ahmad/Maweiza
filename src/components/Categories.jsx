@@ -27,23 +27,27 @@ export const categoriesLinks = [
     },
     {
         name: "كتب",
-        path: "/books",
+        path: "/books/1",
     },
     {
         name: "مقالات",
-        path: "/articles",
+        path: "/articles/1",
     },
     {
         name: "خطب",
-        path: "/khotab",
+        path: "/khotab/1",
     },
     {
         name: "فتاوي",
-        path: "/fatwa",
+        path: "/fatwa/1",
     },
     {
-        name: "اخبار",
-        path: "/news",
+        name: "محاضرات صوتيه",
+        path: "/audios/1",
+    },
+    {
+        name: "محاضرات فديو",
+        path: "/videos/1",
     }
 ]
 

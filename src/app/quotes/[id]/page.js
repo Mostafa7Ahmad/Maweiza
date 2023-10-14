@@ -10,7 +10,7 @@ import Landing from "@/components/Landing";
 
 import quotesAll from "../../../json/quotesAll.json";
 
-export default function QuoteAuthors({ params }) {
+export default function ({ params }) {
     const id = params.id;
 
     const filterData = quotesAll.result.filter((item) => item.authorId === Number(id))

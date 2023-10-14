@@ -1,11 +1,11 @@
 @font-face {
     font-family: "Cairo";
-    src: url("./font/Cairo-SemiBold.ttf");
+    src: url("../font/Cairo-SemiBold.ttf");
 }
 
 @font-face {
     font-family: "Quran";
-    src: url("./font/ArbFONTS-Amiri-Quran.ttf");
+    src: url("../font/ArbFONTS-Amiri-Quran.ttf");
 }
 
 .font-quran {
@@ -218,7 +218,7 @@ nav ul li a:hover::before {
     }
 
     nav ul.show {
-        height: calc(100vh - 100px);
+        height: 100vh;
         padding: 20px;
         z-index: 9;
         background-color: #000000c4;

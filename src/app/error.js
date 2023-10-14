@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 
-export default function CustomError() {
+export default function () {
     return (
         <>
             <section className="pt-52 pb-5">

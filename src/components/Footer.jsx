@@ -1,15 +1,77 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import { links } from "./links";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDoubleLeft } from "@fortawesome/free-solid-svg-icons";
 import { faFacebook, faGithub } from "@fortawesome/free-brands-svg-icons";
 
+const links1 = [
+    {
+        name: "قران كريم",
+        path: "/qaran",
+    },
+    {
+        name: "تفسير القران",
+        path: "/tafsir",
+    },
+    {
+        name: "اسماء الله الحسني",
+        path: "/names",
+    },
+    {
+        name: "حديث",
+        path: "/adith",
+    },
+    {
+        name: "ادعيه والأذكار",
+        path: "/azekar",
+    },
+    {
+        name: "اقتباسات",
+        path: "/quotes",
+    }
+]
+
+
+const links2 = [
+    {
+        name: "كتب",
+        path: "/books/1",
+    },
+    {
+        name: "مقالات",
+        path: "/articles/1",
+    },
+    {
+        name: "خطب",
+        path: "/khotab/1",
+    },
+    {
+        name: "فتاوي",
+        path: "/fatwa/1",
+    },
+    {
+        name: "محاضرات صوتيه",
+        path: "/audios/1",
+    },
+    {
+        name: "محاضرات فديو",
+        path: "/videos/1",
+    }
+]
+
 function Footer() {
-    const navLinks = links.map((item, index) =>
-        <li className={"py-5" + ((links.length - 1) === index ? "" : " border-b border-stone-700 border-solid")} key={index} >
+    const navLinks1 = links1.map((item, index) =>
+        <li className={"py-5" + ((links1.length - 1) === index ? "" : " border-b border-stone-700 border-solid")} key={index} >
+            <div className="hover:mr-2 transition-all">
+                <FontAwesomeIcon className="text-lime-600" icon={faAngleDoubleLeft} />
+                <Link className="text-gray-200 hover:text-white" href={item.path}>{item.name}</Link>
+            </div>
+        </li>
+    )
+
+    const navLinks2 = links2.map((item, index) =>
+        <li className={"py-5" + ((links2.length - 1) === index ? "" : " border-b border-stone-700 border-solid")} key={index} >
             <div className="hover:mr-2 transition-all">
                 <FontAwesomeIcon className="text-lime-600" icon={faAngleDoubleLeft} />
                 <Link className="text-gray-200 hover:text-white" href={item.path}>{item.name}</Link>
@@ -19,7 +81,7 @@ function Footer() {
     return (
         <>
             <footer className="bg-[#191919] p-10 max-md:text-center pb-2">
-                <div className="container m-auto px-3 md:grid md:gap-20 md:grid-cols-2 lg:grid-cols-3">
+                <div className="container m-auto px-3 md:grid md:gap-20 md:grid-cols-2 lg:grid-cols-4">
                     <div className="box text-xl">
                         <Image loading="lazy" quality={75} className="m-auto mb-3" width="200" height="250" src="/logo.png" alt="img" />
                         <p className="text text-gray-300">
@@ -31,7 +93,12 @@ function Footer() {
                     </div>
                     <div className="box">
                         <ul className="links max-md:my-12">
-                            {navLinks}
+                            {navLinks1}
+                        </ul>
+                    </div>
+                    <div className="box">
+                        <ul className="links max-md:my-12">
+                            {navLinks2}
                         </ul>
                     </div>
                     <div className="box">

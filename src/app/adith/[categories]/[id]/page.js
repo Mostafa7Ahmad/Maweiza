@@ -1,7 +1,7 @@
 
 import Landing from "@/components/Landing";
 
-export default async function Adith({ params }) {
+export default async function ({ params }) {
     const id = params.id;
 
     let AdithApi = [];

@@ -10,7 +10,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCopy, faRefresh, faShare } from "@fortawesome/free-solid-svg-icons";
 
-import quotesAll from "../../json/quotesAll.json";
+import quotesAll from "@/json/quotesAll.json";
 
 export default function Quote() {
 
