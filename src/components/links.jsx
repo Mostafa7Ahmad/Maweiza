@@ -1,26 +1,26 @@
 export const links = [
     {
         name: "الصفحة الرائيسية",
-        path: "/"
+        path: "/",
     },
     {
         name: "قران كريم",
-        path: "/qaran"
+        path: "/qaran",
     },
     {
         name: "تفسير القران",
-        path: "/tafsir"
+        path: "/tafsir",
     },
     {
         name: "حديث",
-        path: "/adith"
+        path: "/adith",
     },
     {
         name: "ادعيه والأذكار",
-        path: "/azekar"
+        path: "/azekar",
     },
     {
         name: "اقتباسات",
-        path: "/quotes"
+        path: "/quotes",
     },
-]
+];

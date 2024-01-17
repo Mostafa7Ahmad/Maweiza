@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @font-face {
     font-family: "Cairo";
     src: url("../font/Cairo-SemiBold.ttf");
@@ -26,6 +30,7 @@
 
 ::-webkit-scrollbar {
     width: 6px;
+    height: 6px;
 }
 
 ::-webkit-scrollbar-track {
@@ -82,26 +87,25 @@
 .loader span:nth-child(2) {
     left: 20px;
     animation: bounce 1s cubic-bezier(0.04, 0.35, 0, 1) infinite;
-    animation-delay: .2s;
+    animation-delay: 0.2s;
     background: var(--main-color-alt);
 }
 
 .loader span:nth-child(3) {
     left: -20px;
     animation: bounce 1s cubic-bezier(0.04, 0.35, 0, 1) infinite;
-    animation-delay: .4s;
+    animation-delay: 0.4s;
     background: var(--main-color);
 }
 
 .loader span:nth-child(4) {
     left: -60px;
     animation: bounce 1s cubic-bezier(0.04, 0.35, 0, 1) infinite;
-    animation-delay: .6s;
+    animation-delay: 0.6s;
     background: var(--main-color-alt);
 }
 
 @keyframes bounce {
-
     0%,
     56%,
     100% {
@@ -114,26 +118,28 @@
 }
 
 .loading {
-	-webkit-animation: spinner 1.5s linear infinite;
-	animation: spinner 1.5s linear infinite;
+    -webkit-animation: spinner 1.5s linear infinite;
+    animation: spinner 1.5s linear infinite;
 }
 
 @-webkit-keyframes spinner {
-	0% {
-		-webkit-transform: rotate(0deg);
-	}
-	100% {
-		-webkit-transform: rotate(360deg);
-	}
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
 }
 
 @keyframes spinner {
-	0% {
-		transform: rotate(0deg);
-	}
-	100% {
-		transform: rotate(360deg);
-	}
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 nav .btn-nav.close {
@@ -161,23 +167,6 @@ nav .btn-nav.close span:nth-child(3) {
     transform: translateY(-50%) rotate(318deg);
 }
 
-nav ul li a::before {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 1px;
-    bottom: 2px;
-    left: 50%;
-    background-color: var(--main-color);
-    transition: var(--transition);
-}
-
-nav ul li a:hover::before {
-    width: 100%;
-    left: 0;
-    transform: translateX(0);
-}
-
 @media (max-width: 992px) {
     nav .btn-nav {
         padding: 11px 13px;
@@ -194,15 +183,13 @@ nav ul li a:hover::before {
         display: block;
         width: 100%;
         overflow: hidden;
-        top: 127px;
+        top: 97px;
         left: 0;
         right: 0;
         position: fixed;
-        height: 0;
-        background-color: #19191941;
-        transition:
-            height,
-            padding var(--transition);
+        background-color: #fffffff2;
+        flex-direction: column;
+        transition: all var(--transition);
         z-index: 99999;
     }
 
@@ -213,16 +200,17 @@ nav ul li a:hover::before {
         color: var(--main-color);
     }
 
-    nav ul li a::before {
-        right: 0;
+    nav ul li {
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
-    nav ul.show {
-        height: 100vh;
-        padding: 20px;
-        z-index: 9;
-        background-color: #000000c4;
-        flex-direction: column;
+    nav ul li:first-child {
+        padding-top: 20px;
+    }
+
+    nav ul li:last-child {
+        padding-bottom: 20px;
     }
 }
 
@@ -245,9 +233,145 @@ footer .box .links li a {
 }
 
 .hover-me:hover {
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05));
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.05),
+        rgba(0, 0, 0, 0.05)
+    );
 }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+.shape-electronic {
+    background-color: #28a745;
+    height: 290px;
+    max-width: 320px;
+    border-radius: 30px;
+    position: relative;
+    z-index: 0;
+    box-shadow: 0 0 12px 2px #0000000f;
+}
+
+.shape-electronic .screen-digit {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.shape-electronic .layout-screen-digit {
+    position: absolute;
+    background-color: rgb(0 0 0 / 10%);
+    border-radius: 20px;
+    width: 83%;
+    height: 70%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: inset 0 0 6px 0px #00000021;
+    z-index: -1;
+}
+
+.shape-electronic .contain-screen-digit {
+    border-style: solid;
+    border-width: 7px;
+    border-radius: 15px;
+    text-align: end;
+    height: 86px;
+    width: 70%;
+    margin: 45px 0;
+    padding: 10px 10px;
+    font-size: 40px;
+    box-shadow: inset 0 0 12px 6px #0000000f;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.shape-electronic .buttons-wrapper {
+    padding: 0 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 21px;
+    margin-top: 10px;
+}
+
+.shape-electronic .buttons-wrapper .button {
+    position: relative;
+}
+
+.shape-electronic .buttons-wrapper .button button {
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 0 20px 0px rgb(0 0 0 / 30%);
+    cursor: pointer;
+}
+
+.shape-electronic .buttons-wrapper .button button:hover {
+    box-shadow: 0 0 20px 0px rgb(0 0 0 / 15%);
+}
+
+.shape-electronic .buttons-wrapper .button button:active {
+    box-shadow: 0 0 20px 0px transparent;
+}
+
+.shape-electronic .wrapper-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.shape-electronic .wrapper-button span {
+    color: #fff;
+}
+
+.shape-electronic .buttons-wrapper .wrapper-button:nth-child(2) .button::after {
+    width: 110px;
+    height: 110px;
+}
+
+.shape-electronic .buttons-wrapper .wrapper-button:nth-child(2) .button button {
+    width: 60px;
+    height: 60px;
+}
+
+.up-and-down {
+    position: relative;
+    animation: up-and-down 5s linear infinite;
+}
+
+.go-down {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 30px;
+}
+
+.go-down svg {
+    animation: bouncing 1.5s infinite;
+}
+
+@keyframes up-and-down {
+    0%,
+    100% {
+        top: 0;
+    }
+    50% {
+        top: -50px;
+    }
+}
+
+@keyframes bouncing {
+    0%,
+    10%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+    40%,
+    60% {
+        transform: translateY(-15px);
+    }
+}

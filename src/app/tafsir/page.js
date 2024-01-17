@@ -2,48 +2,25 @@ import Link from "next/link";
 import Image from "next/image";
 
 import Landing from "@/components/Landing";
+import Tafsir from "@/components/Tafsir/Tafsir";
 
 export const metadata = {
     title: 'موقع موعظه | قسم تفسير القران الكريم',
-    description: 'يحتوي هذا القسم علي تفسير جميع سور القران الكريم',
+    description: 'يحتوي هذا القسم علي تفسير القران بالكامل وعرض جميع معلومات السوره',
 }
 
-export default async function () {
-    let Surs = [];
-
-    try {
-        const response = await fetch('https://api.alquran.cloud/v1/meta')
-        const data = await response.json();
-        Surs = data.data.surahs.references;
-    } catch (error) {
-        console.log(error);
-    }
-
-    const showData = Surs.map((item, key) =>
-        <Link key={key} href={`/tafsir/${item.number}`} className="flex bg-white dark:bg-black dark:hover:bg-lime-600 items-center hover:bg-lime-600 hover:text-white transition-colors flex-row justify-between p-5 border-2 border-solid border-lime-600">
-            <div className="flex flex-row gap-5 text-xl items-center">
-                <p className="bg-lime-600 flex w-10 h-10 items-center justify-center rotate-45">
-                    <span className="-rotate-45 text-white">{item.number}</span>
-                </p>
-                <p className="font-quran">{item.name}</p>
-            </div>
-            <span className="text-gray-300"> {item.numberOfAyahs} آيه </span>
-        </Link>
-    );
-
+export default function () {
     return (
         <>
-            <Landing title="قسم تفسير القران الكريم" text="" />
-            <section className="pt-20 pb-20 relative">
+            <Landing title="قسم تفسير القران الكريم" text="يحتوي هذا القسم علي تفسير القران بالكامل وعرض جميع معلومات السوره" />
+            <section className="pb-10 relative">
                 <Image
                     width={100} height={100}
                     src="/img.png"
                     className="absolute w-32 top-16 left-0 -z-40"
                     alt="img"
                 />
-                <div className="container gap-5 flex flex-col m-auto px-3 md:grid md:gap-10 md:grid-cols-2 lg:grid-cols-3">
-                    {showData}
-                </div>
+                <Tafsir />
                 <Image
                     width={100} height={100}
                     src="/img.png"
