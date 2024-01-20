@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
     return (
         <html lang="ar" className="scroll-smooth" dir="rtl">
       <head>
-        <meta name="google-adsense-account" content="ca-pub-2830940611983404">
+        <meta name="google-adsense-account" content="ca-pub-2830940611983404" />
         <script
            dangerouslySetInnerHTML={{
              __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
