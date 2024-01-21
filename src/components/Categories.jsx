@@ -6,11 +6,13 @@ import khotab from "@/images/khotab.jpeg";
 import videos from "@/images/videos.jpg";
 import articles from "@/images/articles.jpeg";
 import fatwa from "@/images/fatwa.jpg";
+import zakat from "@/images/zakat.jpg";
 import qaran from "@/images/qaran.jpeg";
 import tafsir from "@/images/tafsir.jpeg";
 import tasbih from "@/images/tasbih.jpeg";
 import Salah from "@/images/Salah.jpeg";
 import search from "@/images/search.jpeg";
+import stories from "@/images/stories.jpeg";
 import children from "@/images/children.jpeg";
 import quotes from "@/images/quotes.jpeg";
 import audios from "@/images/audios.jpeg";
@@ -29,11 +31,6 @@ export const categoriesLinks = [
         img: tafsir.src,
     },
     {
-        name: "ما لا يسع اطفال المسلمين جهله",
-        path: "/children",
-        img: children.src,
-    },
-    {
         name: "قسم التسبيح",
         path: "/tasbih",
         img: tasbih.src,
@@ -42,11 +39,6 @@ export const categoriesLinks = [
         name: "اوقات الصلاه",
         path: "/salah",
         img: Salah.src,
-    },
-    {
-        name: "اداه الباحث في الحديث",
-        path: "/search",
-        img: search.src,
     },
     {
         name: "قسم الحديث",
@@ -93,6 +85,26 @@ export const categoriesLinks = [
         path: "/videos/1",
         img: videos.src,
     },
+    {
+        name: "اداه الباحث في الحديث",
+        path: "/search",
+        img: search.src,
+    },
+    {
+        name: "ما لا يسع اطفال المسلمين جهله",
+        path: "/children",
+        img: children.src,
+    },
+    {
+        name: "قصص الانبياء",
+        path: "/stories",
+        img: stories.src,
+    },
+    {
+        name: "حساب الذكاه",
+        path: "/zakat",
+        img: zakat.src,
+    }
 ];
 
 export default function Categories() {
@@ -126,7 +138,7 @@ export default function Categories() {
                 <h2 className="text-2xl mb-5 w-fit m-auto relative before:w-10 before:bg-lime-600 before:h-1 before:absolute before:top-1/2 before:right-full before:-translate-x-5 after:w-10 after:bg-lime-600 after:h-1 after:absolute after:top-1/2 after:left-full after:translate-x-5">
                     اقسام الموقع
                 </h2>
-                <div className="container mt-10 gap-5 flex flex-col m-auto px-3 sm:grid md:gap-5 md:grid-cols-2 lg:grid-cols-3">
+                <div className="container mt-10 gap-3 flex flex-col m-auto px-3 sm:grid md:gap-3 md:grid-cols-2 lg:grid-cols-3">
                     {showData}
                 </div>
                 <Image

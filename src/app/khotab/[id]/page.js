@@ -52,7 +52,7 @@ export default async function ({ params }) {
                             <a
                                 href={item2.url}
                                 download
-                                className="flex justify-between mt-2 w-full items-center px-3 py-2 text-sm font-medium text-center text-white bg-lime-700 rounded-lg hover:bg-lime-800"
+                                className="flex justify-between mt-2 w-full items-center px-3 py-2 text-sm font-medium text-center text-white bg-gradient-to-r from-green-600 to-lime-500 rounded-lg  hover:scale-105 active:scale-90 transition-all"
                             >
                                 <span>
                                     تحميل الخطبه بصيغه {item2.extension_type}
@@ -68,7 +68,10 @@ export default async function ({ params }) {
 
     return (
         <>
-            <Landing title="قسم الخطب" text="يحتوي هذا القسم علي اكثر من 280 خطبه نافعة" />
+            <Landing
+                title="قسم الخطب"
+                text="يحتوي هذا القسم علي اكثر من 280 خطبه نافعة"
+            />
             <section className="py-10 container px-3 m-auto">
                 <div className="gap-2 flex flex-col md:grid md:gap-3 md:grid-cols-2 lg:grid-cols-3">
                     {showData}
@@ -88,14 +91,17 @@ export default async function ({ params }) {
                             السابق
                         </Link>
                     )}
-                    <span> {links.current_page} / {links.pages_number} </span>
+                    <span>
+                        {" "}
+                        {links.current_page} / {links.pages_number}{" "}
+                    </span>
                     {links.next === "" ? (
                         <span></span>
                     ) : (
                         <Link
                             href={`/khotab/${Number(params.id) + 1}`}
                             className="flex transition-colors flex-row justify-between py-3 px-5 border-2 border-solid bg-gray-100 dark:bg-[#323232] dark:border-stone-700 rounded-lg items-center dark:hover:border-lime-600 dark:hover:bg-lime-600 hover:bg-lime-600 hover:border-lime-600 hover:text-white"
-                            >
+                        >
                             التالي
                             <FontAwesomeIcon
                                 className="mr-2"

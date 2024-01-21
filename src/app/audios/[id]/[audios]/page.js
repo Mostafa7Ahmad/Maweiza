@@ -37,7 +37,7 @@ export default async function ({ params }) {
                 <Link
                     href={item.url}
                     download
-                    className="flex justify-between mt-2 w-full items-center px-3 py-2 text-sm font-medium text-center text-white bg-lime-700 rounded-lg hover:bg-lime-800"
+                    className="flex justify-between mt-2 w-full items-center px-3 py-2 text-sm font-medium text-center text-white bg-gradient-to-r from-green-600 to-lime-500 rounded-lg  hover:scale-105 active:scale-90 transition-all"
                 >
                     <span> استماع للمحاضره </span>
                     <FontAwesomeIcon icon={faHeadphones} />

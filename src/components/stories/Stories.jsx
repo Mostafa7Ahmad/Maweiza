@@ -1,10 +1,11 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
+import stories from "@/json/stories";
 
-export default function Search() {
-    let [dataTafsir, setDataTafsir] = useState([]);
+export default function Stories() {
+    let [dataStories, setDataStories] = useState(stories);
     let [massage, setMassage] = useState(false);
 
     function optimize_string(string) {
@@ -26,31 +27,21 @@ export default function Search() {
         return text;
     }
 
-
-    useEffect(() => {
-        async function fetchApi() {
-            try {
-                const response = await fetch("https://api.alquran.cloud/v1/meta");
-                const data = await response.json().data.surahs.references;
-                setDataTafsir(data);
-            } catch (error) {
-                console.log(error);
-            }
-        }
-        fetchApi();
-    }, []);
-
-    const showData = dataTafsir.map((item, key) =>
-        <Link key={key} href={`/Search/${item.number}`} className="font-quran flex text-center transition-colors flex-row justify-center p-5 border-2 border-solid bg-white dark:border-gray-500 dark:bg-[#191919] rounded-sm items-center dark:hover:border-lime-600 dark:hover:bg-lime-600 hover:bg-lime-600 hover:border-lime-600 hover:text-white">
-                {item.name}
+    const showData = dataStories.map((item, key) => (
+        <Link
+            key={key}
+            href={`/stories/${item.id}`}
+            className="flex transition-all flex-row justify-center p-5 border-2 border-solid bg-white dark:border-gray-500 dark:bg-[#191919] rounded-sm items-center dark:hover:border-lime-600 dark:hover:bg-gradient-to-r dark:hover:from-green-600 dark:hover:to-lime-500 hover:bg-gradient-to-r hover:from-green-600 hover:to-lime-500 hover:border-none active:scale-90 hover:text-white"
+        >
+            {item.name}
         </Link>
-    );
+    ));
 
     function handleChange(e) {
-        let dataFilter = dataTafsir.filter((item) =>
+        let dataFilter = stories.filter((item) =>
             optimize_string(item.name).includes(optimize_string(e.target.value))
         );
-        setDataTafsir(dataFilter);
+        setDataStories(dataFilter);
         dataFilter.length === 0 ? setMassage(true) : setMassage(false);
     }
 
@@ -81,7 +72,7 @@ export default function Search() {
                     <p className="text-center">لا يوجد نتائج</p>
                 </div>
             ) : (
-                <div className="container gap-5 flex flex-col m-auto px-3 md:grid md:gap-3 md:grid-cols-4 lg:grid-cols-6">
+                <div className="container gap-2 flex flex-col m-auto px-3 md:grid md:gap-3 md:grid-cols-2 lg:grid-cols-4">
                     {showData}
                 </div>
             )}

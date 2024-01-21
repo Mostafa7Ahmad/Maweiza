@@ -5,7 +5,7 @@ import Link from "next/link";
 export default async function () {
     return (
         <section className="py-10">
-            <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+            <div className="px-4 mx-auto max-w-screen-xl">
                 <div className="mx-auto max-w-screen-sm text-center">
                     <FontAwesomeIcon
                         className="text-gray-500 text-4xl mb-3 dark:text-gray-400"
