@@ -8,12 +8,12 @@ export default function Home() {
     return (
         <>
             <section className="bg-bottom relative bg-cover w-full h-screen flex items-center justify-center p-10">
-                <div className="z-1 mb-10 relative flex flex-col-reverse md:flex-row md:justify-around">
+                <div className="z-1 mt-20 relative flex flex-col-reverse md:flex-row md:justify-around">
                         <div className="flex text-center justify-center md:text-right flex-col">
-                            <h3 className="text-3xl mb-3">
+                            <h3 className="text-2xl mb-3">
                                 مرحبا بكم في موقع موعظة
                             </h3>
-                            <p className="text-xl md:max-w-[700px]">
+                            <p className="text-ml md:max-w-[700px]">
                                 موقع إسلامي يوجد به القرآن الكريم وتفسير القران
                                 الكريم والحديث الشريف واذكار وأدعيه والاقتباسات
                                 الاسلاميه واوقات الصلاه والمزيد
@@ -22,7 +22,7 @@ export default function Home() {
                     
                     <img
                         alt=""
-                        className="m-auto mb-5 up-and-down"
+                        className="m-auto mt-5 up-and-down"
                         src={image.src}
                     />
                 </div>

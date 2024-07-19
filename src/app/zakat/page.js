@@ -4,11 +4,11 @@ import Link from "next/link";
 
 export default async function () {
     return (
-        <section className="py-10">
+        <section className="py-40 pb-30 h-100">
             <div className="px-4 mx-auto max-w-screen-xl">
                 <div className="mx-auto max-w-screen-sm text-center">
                     <FontAwesomeIcon
-                        className="text-gray-500 text-4xl mb-3 dark:text-gray-400"
+                        className="text-gray-500 text-6xl mb-3 dark:text-gray-400"
                         icon={faPenRuler}
                     />
                     <h1 className="text-3xl text-primary-600 dark:text-primary-500 mb-3 ">

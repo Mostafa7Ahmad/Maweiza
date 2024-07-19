@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleUp, faSun } from "@fortawesome/free-solid-svg-icons";
 import { faMoon } from "@fortawesome/free-solid-svg-icons";
+import SplashScreen from "./SplashScreen";
 
 function Buttons() {
     const [dark, setDark] = useState(false);
@@ -51,9 +52,10 @@ function Buttons() {
                 {dark ? (
                     <FontAwesomeIcon className="m-auto block" icon={faMoon} />
                 ) : (
-                    <FontAwesomeIcon className="m-auto block" icon={faSun} />
+                    <FontAwesomeIcon className="m-auto block text-yellow-500" icon={faSun} />
                 )}
             </span>
+            <SplashScreen ></SplashScreen>
         </>
     );
 }

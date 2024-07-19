@@ -31,9 +31,9 @@ export default function Navbar() {
 
     return (
         <>
-            <Headroom>
+            <Headroom className="fixed z-50 top-0 left-0 right-0">
                 <nav className="z-40 relative backdrop-blur-md">
-                    <div className="nav bg-[rgb(250_250_250_/_85%)] dark:bg-[#00000070]">
+                    <div className="nav bg-[rgb(250_250_250_/_50%)] dark:bg-[#00000021] px-3">
                         <div className="container flex justify-between items-center m-auto py-5 px-3">
                             <Link href="/">
                                 <Image
@@ -68,9 +68,9 @@ export default function Navbar() {
                                             menuButton[1] == "show"
                                                 ? nav.current.scrollHeight +
                                                   "px"
-                                                : "0",
+                                                : "initial",
                                     }}
-                                    className="flex gap-[10px] list-none max-[992px]:bg-[#fafafaeb] max-[992px]:dark:bg-[#000000a6]"
+                                    className={"flex gap-[10px] list-none max-[992px]:bg-[#fafafaeb] max-[992px]:dark:bg-[#000000a6] " + (menuButton[1] == "show" ? nav.current.scrollHeight + "" : "hide")}
                                 >
                                     {navLinks}
                                 </ul>

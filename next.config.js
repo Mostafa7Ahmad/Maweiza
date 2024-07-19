@@ -1,5 +1,4 @@
-/* eslint-disable import/no-extraneous-dependencies */
-/* eslint-disable @typescript-eslint/no-var-requires */
+// next.config.js
 
 const runtimeCaching = require('next-pwa/cache');
 const withPWA = require('next-pwa')({
@@ -10,8 +9,7 @@ const withPWA = require('next-pwa')({
   runtimeCaching,
 });
 
-const nextConfig = withPWA({
-  reactStrictMode: false, 
-});
-
-module.exports = nextConfig;
+module.exports = {
+  ...withPWA,
+  reactStrictMode: false,
+};

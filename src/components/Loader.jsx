@@ -1,3 +1,4 @@
+
 export default function Loader() {
     return (
         <section className="wrapper">

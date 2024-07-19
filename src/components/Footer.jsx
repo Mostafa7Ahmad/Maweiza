@@ -157,7 +157,7 @@ function Footer() {
 
     return (
         <>
-            <footer className="bg-white dark:bg-[#191919] dark:border-t dark:border-stone-700 shadow-[0_0_20px_rgb(0_0_0_/_5%)] p-10 max-md:text-center pb-2">
+            <footer className="bg-white dark:bg-[#191919] border-t dark:border-t dark:border-stone-700 shadow-[0_0_20px_rgb(0_0_0_/_5%)] p-10 max-md:text-center pb-2">
                 <div className="container m-auto px-3 md:grid md:gap-20 md:grid-cols-2 lg:grid-cols-4">
                     <div className="box text-xl">
                         <Image
@@ -187,7 +187,7 @@ function Footer() {
                     <div className="box">
                         <ul className="links max-md:my-12">{navLinks3}</ul>
                         <div className="line text-gray-800 dark:text-gray-300 my-10">
-                            <p className="text-center md:text-xl">
+                            <p className="text-center md:text-ml">
                                 مطور الموقع : مصطفي احمد
                             </p>
                             <div className="mt-5 flex justify-center gap-2">

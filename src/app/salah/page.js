@@ -1,14 +1,15 @@
 import { Suspense } from "react";
 import Salah from "@/components/Salah";
-import Landing from "@/components/Landing";
+import EventsTimer from "@/components/EventsTimer";
 
 export default function () {
     return (
         <>
-            <Landing title="اوقات الصلاة" />
+
             <Suspense>
                 <Salah />
             </Suspense>
+            <EventsTimer />
         </>
     );
 }

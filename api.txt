@@ -57,5 +57,7 @@ https://api3.islamhouse.com/v3/paV29H2gm56kvLPy/main/audios/ar/ar/1/25/json
 https://api3.islamhouse.com/v3/paV29H2gm56kvLPy/main/videos/ar/ar/1/25/json
 
 
+راديو ل 18 قارئ واذاعات القرأن الكريم
+يمكنك الحصول على الراديو من خلال API الراديو.
 
-#f7f9fb
+https://data-rosy.vercel.app/radio.json

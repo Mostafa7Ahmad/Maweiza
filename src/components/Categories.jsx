@@ -18,102 +18,122 @@ import quotes from "@/images/quotes.jpeg";
 import audios from "@/images/audios.jpeg";
 import books from "@/images/books.jpeg";
 import Image from "next/image";
+import localStorage from "local-storage";
 
 export const categoriesLinks = [
     {
         name: "قسم القران الكريم",
         path: "/qaran",
         img: qaran.src,
+        new: false,
     },
     {
         name: "قسم تفسير القران",
         path: "/tafsir",
         img: tafsir.src,
+        new: false,
     },
     {
         name: "قسم التسبيح",
         path: "/tasbih",
         img: tasbih.src,
+        new: false,
     },
     {
-        name: "اوقات الصلاه",
+        name: "اوقات الصلاة والمناسبات الاسلامية",
         path: "/salah",
         img: Salah.src,
+        new: false,
     },
     {
         name: "قسم الحديث",
         path: "/adith",
         img: adith.src,
+        new: false,
     },
     {
         name: "قسم الادعية والاذكار",
         path: "/azekar",
         img: azekar.src,
+        new: false,
     },
     {
         name: "قسم الاقتباسات",
         path: "/quotes",
         img: quotes.src,
+        new: false,
     },
     {
         name: "قسم الكتب",
         path: "/books/1",
         img: books.src,
+        new: false,
     },
     {
         name: "قسم المقالات",
         path: "/articles/1",
         img: articles.src,
+        new: false,
     },
     {
         name: "قسم الخطب",
         path: "/khotab/1",
         img: khotab.src,
+        new: false,
     },
     {
         name: "قسم الفتاوي",
         path: "/fatwa/1",
         img: fatwa.src,
+        new: false,
     },
     {
         name: "قسم المحاضرات الصوتيه",
         path: "/audios/1",
         img: audios.src,
+        new: false,
     },
     {
-        name: "قسم المحاضرات الفديو",
+        name: "قسم المحاضرات الفيديو",
         path: "/videos/1",
         img: videos.src,
+        new: false,
     },
     {
         name: "اداه الباحث في الحديث",
-        path: "/search",
+        path: `/search/${localStorage.get('id') ?? "-"}`,
         img: search.src,
+        new: true,
     },
     {
         name: "ما لا يسع اطفال المسلمين جهله",
         path: "/children",
         img: children.src,
+        new: true,
     },
-    {
-        name: "قصص الانبياء",
-        path: "/stories",
-        img: stories.src,
-    },
-    {
-        name: "حساب الذكاه",
-        path: "/zakat",
-        img: zakat.src,
-    }
+    // {
+    //     name: "قصص الانبياء",
+    //     path: "/stories",
+    //     img: stories.src,
+    //     new: true,
+    // },
+    // {
+    //     name: "حساب الذكاه",
+    //     path: "/zakat",
+    //     img: zakat.src,
+    //     new: true,
+    // }
 ];
 
 export default function Categories() {
     const showData = categoriesLinks.map((item, key) => (
         <div
             key={key}
-            className="shadow-[0_0_15px_rgb(0_0_0_/_5%)] border border-gray-200 rounded-lg bg-white dark:bg-[#191919] dark:border dark:border-stone-700"
+            className="shadow-[0_0_15px_rgb(0_0_0_/_5%)] border border-gray-200 rounded-lg bg-white dark:bg-[#191919] dark:border dark:border-stone-700 relative"
         >
+                {(item.new) ? <div className="label">قسم جديد</div> : null}
             <div className="m-5 overflow-hidden rounded-md">
+                
                 <img src={item.img} className="md:w-full md:h-60" alt="" />
             </div>
             <Link
