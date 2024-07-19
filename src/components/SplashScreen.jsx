@@ -9,7 +9,7 @@ const spinnerVariants = {
 };
 
 export default function SplashScreen(props) {
-    const theme = localStorage.getItem('theme');
+    const theme = localStorage.getItem('theme') ?? 0;
     const [isLoading, setIsLoading] = useState(true);
 
     if (props.show ?? true) {
