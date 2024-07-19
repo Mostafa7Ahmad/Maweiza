@@ -1,5 +1,7 @@
 "use client";
 
+import Cookie from 'cookie-universal'
+
 import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleUp, faSun } from "@fortawesome/free-solid-svg-icons";
@@ -10,10 +12,13 @@ function Buttons() {
     const [dark, setDark] = useState(false);
     const [btnClass, setBtnClass] = useState("");
 
+    const cookies = Cookie()
+
     useEffect(() => {
         if (localStorage.theme === "dark") {
             document.documentElement.setAttribute("data-theme", "dark");
             localStorage.theme = "dark";
+            cookies.set('theme', 'dark')
             setDark(true);
         }
         window.addEventListener("scroll", function () {
@@ -25,10 +30,12 @@ function Buttons() {
         if (dark) {
             document.documentElement.setAttribute("data-theme", "light");
             localStorage.theme = "light";
+            cookies.set('theme', 'light')
             setDark(false);
         } else {
             document.documentElement.setAttribute("data-theme", "dark");
             localStorage.theme = "dark";
+            cookies.set('theme', 'dark')
             setDark(true);
         }
     }

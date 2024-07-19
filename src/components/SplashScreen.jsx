@@ -2,7 +2,8 @@
 
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from 'framer-motion';
-import localStorage from "local-storage";
+// import localStorage from "local-storage";
+import Cookie from 'cookie-universal'
 
 const spinnerVariants = {
     initial: { opacity: 1 },
@@ -10,8 +11,11 @@ const spinnerVariants = {
 };
 
 export default function SplashScreen(props) {
-    const theme = localStorage.get("theme") ?? 0;
     const [isLoading, setIsLoading] = useState(true);
+
+    const cookies = Cookie()
+
+    const theme = cookies.get("theme") ?? "light";
 
     if (props.show ?? true) {
         useEffect(() => {
