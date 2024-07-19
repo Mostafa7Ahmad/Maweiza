@@ -5,7 +5,6 @@ import EventsTimer from "@/components/EventsTimer";
 export default function () {
     return (
         <>
-
             <Suspense>
                 <Salah />
             </Suspense>

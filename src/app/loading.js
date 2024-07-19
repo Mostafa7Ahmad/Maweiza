@@ -1,9 +1,9 @@
-import localStorage from 'local-storage';
+
+
+import SplashScreen from "@/components/SplashScreen";
 
 export default function Loading() {
     return (
-        <div className={"splash-screen" + (localStorage.get('theme') == "dark" ? " dark" : "")} >
-            <div className="loader"></div>
-        </div>
+        <SplashScreen show={false}></SplashScreen>
     );
 }

@@ -1,5 +1,4 @@
-
-import localStorage from 'local-storage';
+"use client";
 
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from 'framer-motion';
@@ -9,31 +8,48 @@ const spinnerVariants = {
     exit: { opacity: 0, transition: { duration: 0.5 } }
 };
 
-export default function SplashScreen() {
+export default function SplashScreen(props) {
+    const theme = localStorage.getItem('theme');
     const [isLoading, setIsLoading] = useState(true);
 
-    useEffect(() => {
-        // Simulating some delay to show loading screen
-        const timer = setTimeout(() => {
-            setIsLoading(false);
-        }, 2000);
+    if (props.show ?? true) {
+        useEffect(() => {
+            // Simulating some delay to show loading screen
+            const timer = setTimeout(() => {
+                setIsLoading(false);
+            }, 1000);
 
-        return () => clearTimeout(timer);
-    }, []);
+            return () => clearTimeout(timer);
+        }, []);
+    }
 
     return (
-        <AnimatePresence>
-            {isLoading && (
-                <motion.div
+        <>
+            {(props.show ?? true) ?
+                <AnimatePresence>
+                    {isLoading && (
+                        <motion.div
+                            key="loadingScreen"
+                            className={"splash-screen " + theme}
+                            initial="initial"
+                            exit="exit"
+                            variants={spinnerVariants}
+                        >
+                            <div className="loader"></div>
+                        </motion.div>
+                    )}
+                </AnimatePresence>
+                :
+                <div
                     key="loadingScreen"
-                    className={"splash-screen" + (localStorage.get('theme') === "dark" ? " dark" : "" )}
+                    className={"splash-screen " + theme}
                     initial="initial"
                     exit="exit"
                     variants={spinnerVariants}
                 >
                     <div className="loader"></div>
-                </motion.div>
-            )}
-        </AnimatePresence>
+                </div>
+            }
+        </>
     );
 }

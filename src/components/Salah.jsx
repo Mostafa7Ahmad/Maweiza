@@ -152,25 +152,26 @@ export default function Salah() {
                 }
                 setBtnError(
                     <>
-                        <div className="line text-gray-300 mt-20 container m-auto">
-                            <p className="p-5 border-2 border-solid border-amber-300 text-amber-400">
-                                <span className="text-xl">تنبيه هام</span>
-                                <br />
-                                تم ضبط توقت الصلاه بتوقيت مصر القاهره بسبب عدم
-                                القدره علي تحديت الموقع الزمني
-                                <br />
-                                اسمح للمتصفح بتحديد الموقع لعرض مواقيت الصلاه
-                                بدقه
-                                <br />
-                                او قم بتشغيل GPS
-                                <br />
-                                وقم بالضغط علي الزر بالاسفل للتحديث
-                            </p>
+                        <div className="mt-10 container pb-5 pt-2 px-5 m-auto">
+                            <div className="px-6 py-6 mb-3 shadow-[0_0_15px_rgb(0_0_0_/_5%)] border  border-amber-300 text-amber-400 rounded-md bg-white dark:bg-stone-900 dark:border dark:border-stone-600">
+                                <span className="text-amber-400">تنبيه هام :</span>
+                                <span className="">
+                                    تم ضبط توقت الصلاه بتوقيت مصر القاهره بسبب عدم
+                                    القدره علي تحديت الموقع الزمني
+                                    <br />
+                                    اسمح للمتصفح بتحديد الموقع لعرض مواقيت الصلاه
+                                    بدقه
+                                    <br />
+                                    او قم بتشغيل GPS
+                                    <br />
+                                    وقم بالضغط علي الزر بالاسفل للتحديث
+                                </span>
+                            </div>
                         </div>
-                        <div className="mt-10 flex justify-center">
+                        <div className="mt-2 flex justify-center">
                             <button
                                 onClick={() => setRefreshGps(!refreshGps)}
-                                className="text-lime-600 border-2 text-xl border-lime-600 hover:bg-lime-600 hover:text-white focus:outline-none font-medium p-3 text-center inline-flex items-center"
+                                className="flex transition-colors flex-row py-3 px-5 border-2 w-80 justify-center border-solid bg-gray-100 dark:bg-[#323232] dark:border-stone-700 rounded-lg items-center dark:hover:border-lime-600 dark:hover:bg-lime-600 hover:bg-lime-600 hover:border-lime-600 hover:text-white"
                             >
                                 تحديث
                             </button>
@@ -202,7 +203,7 @@ export default function Salah() {
         <>
             <Landing title="اوقات الصلاة" />
             <ToastContainer />
-            <section className="pt-15 mt-10 salah pb-5 relative">
+            <section className="pt-15 mt-4 salah pb-5 relative">
                 <Image
                     width={100}
                     height={100}

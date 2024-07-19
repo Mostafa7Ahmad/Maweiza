@@ -77,7 +77,7 @@ export default function EventsTimer() {
         <div className="px-6 py-6 mb-3 shadow-[0_0_15px_rgb(0_0_0_/_5%)] border border-gray-200 rounded-md bg-white dark:bg-stone-900 dark:border dark:border-stone-600">
           <span className="text-lime-600">ملاحظة :</span>
           <span className="">
-            يحتفل بعيد الفطر والاضحي فقط والاحتفال بغير ذالك بدعة تم ذكر المناسبات للمعرفه لا للاحتفال 
+            يحتفل بعيد الفطر والاضحي فقط والاحتفال بغير ذالك بدعة تم ذكر المناسبات للمعرفه لا للاحتفال
           </span>
         </div>
       </div>
