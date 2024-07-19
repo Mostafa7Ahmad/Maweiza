@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from 'framer-motion';
+import localStorage from "local-storage";
 
 const spinnerVariants = {
     initial: { opacity: 1 },
@@ -9,7 +10,7 @@ const spinnerVariants = {
 };
 
 export default function SplashScreen(props) {
-    const theme = localStorage.getItem('theme') ?? 0;
+    const theme = localStorage.get("theme") ?? 0;
     const [isLoading, setIsLoading] = useState(true);
 
     if (props.show ?? true) {
