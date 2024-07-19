@@ -248,10 +248,24 @@ export default function Salah() {
                                     </span>
                                 </> : null)}
                             </div>
-                            <div className={"p-5 w-full asr rounded-md mb-5 md:mb-0 bg-gradient-to-r from-green-600 to-lime-500 flex flex-col justify-center text-xl" + ((nextPrayerIndex === 3) ? " md:scale-110 sm:scale-105" : " text-gray-300 py-8")}>
+                            <div className={"p-5 w-full asr rounded-md mb-5 md:mb-0 bg-gradient-to-r from-green-600 to-lime-500 flex flex-col justify-center text-xl" + ((nextPrayerIndex === 2) ? " md:scale-110 sm:scale-105" : " text-gray-300 py-8")}>
                                 <span className="block mb-1">أذان العصر </span>
                                 <span className="block font-sans">
                                     {moment(timings.Asr, ["HH:mm"]).format(
+                                        "hh:mm A"
+                                    )}
+                                </span>
+                                {((nextPrayerIndex === 2) ? <>
+                                    <span span className="block mt-3 text-sm"> الصلاة التالية </span>
+                                    <span className="block font-sans text-3xl">
+                                        {remainingTime.h}:{remainingTime.m}:{remainingTime.s}
+                                    </span>
+                                </> : null)}
+                            </div>
+                            <div className={"p-5 w-full maghrib rounded-md mb-5 md:mb-0 bg-gradient-to-r from-green-600 to-lime-500 flex flex-col justify-center text-xl" + ((nextPrayerIndex === 3) ? " md:scale-110 sm:scale-105" : " text-gray-300 py-8")}>
+                                <span className="block mb-1">أذان المغرب </span>
+                                <span className="block font-sans">
+                                    {moment(timings.Sunset, ["HH:mm"]).format(
                                         "hh:mm A"
                                     )}
                                 </span>
@@ -262,28 +276,14 @@ export default function Salah() {
                                     </span>
                                 </> : null)}
                             </div>
-                            <div className={"p-5 w-full maghrib rounded-md mb-5 md:mb-0 bg-gradient-to-r from-green-600 to-lime-500 flex flex-col justify-center text-xl" + ((nextPrayerIndex === 4) ? " md:scale-110 sm:scale-105" : " text-gray-300 py-8")}>
-                                <span className="block mb-1">أذان المغرب </span>
-                                <span className="block font-sans">
-                                    {moment(timings.Sunset, ["HH:mm"]).format(
-                                        "hh:mm A"
-                                    )}
-                                </span>
-                                {((nextPrayerIndex === 4) ? <>
-                                    <span span className="block mt-3 text-sm"> الصلاة التالية </span>
-                                    <span className="block font-sans text-3xl">
-                                        {remainingTime.h}:{remainingTime.m}:{remainingTime.s}
-                                    </span>
-                                </> : null)}
-                            </div>
-                            <div className={"p-5 w-full isha rounded-md mb-5 md:mb-0 bg-gradient-to-r from-green-600 to-lime-500 flex flex-col justify-center text-xl" + ((nextPrayerIndex === 5) ? " md:scale-110 sm:scale-105" : " text-gray-300 py-8")}>
+                            <div className={"p-5 w-full isha rounded-md mb-5 md:mb-0 bg-gradient-to-r from-green-600 to-lime-500 flex flex-col justify-center text-xl" + ((nextPrayerIndex === 4) ? " md:scale-110 sm:scale-105" : " text-gray-300 py-8")}>
                                 <span className="block mb-1">أذان العشاء </span>
                                 <span className="block font-sans">
                                     {moment(timings.Isha, ["HH:mm"]).format(
                                         "hh:mm A"
                                     )}
                                 </span>
-                                {((nextPrayerIndex === 5) ? <>
+                                {((nextPrayerIndex === 4) ? <>
                                     <span span className="block mt-3 text-sm"> الصلاة التالية </span>
                                     <span className="block font-sans text-3xl">
                                         {remainingTime.h}:{remainingTime.m}:{remainingTime.s}
