@@ -108,7 +108,7 @@ export default function Azekar() {
                         className="absolute inset-0 bg-black bg-opacity-75 p-6 rounded-md gap-4 flex justify-center flex-col items-center"
                     >
 
-                        <span className="w-full">
+                        <span className="w-full text-white text-center">
                             ممتاز انتهيت من عدد المرات هنيئا لك استمر
                         </span>
                         <div className=" flex justify-center gap-4 items-center">
@@ -145,7 +145,6 @@ export default function Azekar() {
                 className="absolute w-32 bottom-0 rotate-180 right-0 -z-40"
                 alt="img"
             />
-            
         </>
     );
 }
