@@ -322,13 +322,7 @@ export default function Salah() {
                         </div> */}
                     </>
                 )}
-                <Image
-                    width={100}
-                    height={100}
-                    src="/img.png"
-                    className="absolute w-32 bottom-0 rotate-180 right-0 -z-40"
-                    alt="img"
-                />
+
             </section>
         </>
     );

@@ -21,8 +21,6 @@ export default async function ({ params }) {
 
         string = string.replace("<br/>", "")
         string = string.replace("<br>", "")
-
-        // console.log(string);
         
         return string;
     }
@@ -31,7 +29,7 @@ export default async function ({ params }) {
     let showData = "";
     let length = 0;
 
-    if (id != 0) {
+    if (id != "-") {
         try {
             const res = await fetch(`https://dorar.net/dorar_api.json?skey=${id}`);
             const data = await res.json();
@@ -48,7 +46,6 @@ export default async function ({ params }) {
                     <div dangerouslySetInnerHTML={{ __html: optimize_string(hadith) }} />
                 </div>
             ));
-            // console.log(data.ahadith.result.length)
         } catch (error) {
             console.log(error);
             showData = <p className="text-center">لا يوجد نتائج</p>;
@@ -59,7 +56,7 @@ export default async function ({ params }) {
         <>
             <Landing title="اداه الباحث في الحديث"  text="يمكنك الموقع من البحث عن الأحاديث النبوية والتحقق من صحتها إنطلاقا من كلمة أو جملة من الحديث" />
             <section className="py-2">
-                <SearchHadith />
+                <SearchHadith id={id} />
                 <div className="container px-5 m-auto">
                     <div className="mb-10">
                         {length != 153 ? showData : <p className="text-center">لا يوجد نتائج</p>}

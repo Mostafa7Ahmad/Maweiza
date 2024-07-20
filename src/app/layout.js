@@ -38,7 +38,7 @@ export default function RootLayout({ children }) {
                     }}
                 />
             </head>
-            <body className="bg-[#fafafa] header dark:bg-[#000000f2] dark:text-white transition-colors selection:bg-lime-600 selection:text-white">
+            <body className="bg-[rgb(250,250,250)] text-sm header dark:bg-[#000000f2] dark:text-white transition-colors selection:bg-lime-600 selection:text-white">
                 <iframe
                     src="https://www.googletagmanager.com/ns.html?id=GTM-WBZJG335"
                     height="0"

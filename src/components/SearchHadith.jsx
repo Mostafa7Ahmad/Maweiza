@@ -4,9 +4,9 @@ import Link from "next/link";
 import { useState } from "react";
 import localStorage from 'local-storage';
 
-export default function SearchHadith() {
+export default function SearchHadith(props) {
 
-    const [id, setId] = useState(localStorage.get('id'));
+    const [id, setId] = useState((props.id != "-") ? (localStorage.get('id')) ?? "" : "");
 
     function handleChange(e) {
         setId(e.target.value);
@@ -22,7 +22,7 @@ export default function SearchHadith() {
                     onChange={handleChange}
                     className="px-4 py-2 dark:bg-[#191919] block w-full"
                     placeholder="بحث..."
-                    value={localStorage.get('id') ?? ""}
+                    value={id ?? ""}
                 />
                 <Link href={"/search/" + id} className="flex items-center justify-center px-4 transition-colors border-r hover:text-white hover:border-lime-600 hover:bg-lime-600 dark:border-gray-500">
                     <svg

@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import Landing from "./Landing";
 
 function Tasbih() {
     let [tasbih, setTasbih] = useState(0);
@@ -28,6 +29,7 @@ function Tasbih() {
 
     return (
         <>
+            <Landing title="مسبحة الكترونية" text="قم التسبيح الان الكترونيا بدون الحاجه لسبحة يدوية مع الاحتفاظ بالعدد" />
             <section className="py-10 relative">
                 <Image
                     width={100}
@@ -40,7 +42,7 @@ function Tasbih() {
                     <div className="shape-electronic m-auto">
                         <div className="screen-digit">
                             <div className="layout-screen-digit" />
-                            <div className="contain-screen-digit bg-white border-white text-black">
+                            <div className="contain-screen-digit font-sans bg-white border-white text-black">
                                 {tasbih}
                             </div>
                         </div>

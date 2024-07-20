@@ -1,13 +1,13 @@
 import { Suspense } from "react";
 import Tasbih from "@/components/Tasbih";
-import Landing from "@/components/Landing";
+import Azekar from "@/components/Azekar";
 
 export default function () {
     return (
         <>
-            <Landing title="تسبيح" />
             <Suspense>
                 <Tasbih />
+                <Azekar />
             </Suspense>
         </>
     );

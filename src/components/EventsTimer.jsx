@@ -37,7 +37,12 @@ export default function EventsTimer() {
         const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
 
-        return `${days} أيام، ${hours} ساعات، ${minutes} دقائق، ${seconds} ثوان`;
+        return {
+          seconds: seconds,
+          minutes: minutes,
+          hours: hours,
+          days: days,
+        };
       }
     };
 
@@ -62,25 +67,53 @@ export default function EventsTimer() {
 
   return (
     <>
-      <Landing title=" المناسبات الإسلامية القادمة " />
-      <div className="container pb-5 pt-2 px-5 m-auto md:grid lg:grid-cols-3 md:grid-cols-2 gap-x-5 justify-center items-center ">
+      <Landing title=" المناسبات الإسلامية القادمة " text="يحتفل بعيد الفطر والاضحي فقط والاحتفال بغير ذالك بدعة تم ذكر المناسبات للمعرفه لا للاحتفال" />
+      <div className="container pb-5 pt-5 px-5 m-auto md:grid lg:grid-cols-3 md:grid-cols-2 gap-x-5 justify-center items-center ">
         {eventsTimeLeft.map((event, index) => (
-          <div key={index} className="px-6 py-6 mb-3 shadow-[0_0_15px_rgb(0_0_0_/_5%)] border border-gray-300 rounded-md bg-white text-center dark:bg-[#00000021] dark:border dark:border-stone-600" >
-            <h3 className="block text-ml mb-1 text-lime-600"> المتبقي علي {event.name}</h3>
-            <p className="block font-sans">
-              {event.timeLeft}
-            </p>
+          <div key={index} className="relative px-6 py-6 mb-3 shadow-[0_0_15px_rgb(0_0_0_/_5%)] border border-gray-200 rounded-md bg-white dark:bg-stone-900 dark:border dark:border-stone-600 flex flex-col justify-between items-center" >
+
+            <h3 className="block text-ml mb-7 text-lime-600"> المتبقي علي {event.name}</h3>
+            <div className="w-full gap-3 rounded-xl mb-1 flex justify-between items-center">
+              <div className="text-center w-full">
+                الثواني
+              </div>
+              <div className="text-center w-full">
+                الدقائق
+              </div>
+              <div className="text-center w-full">
+                الساعات
+              </div>
+              <div className="text-center w-full">
+                الايام
+              </div>
+            </div>
+
+            <div className="w-full gap-3 text-xl rounded-xl flex justify-between items-center">
+              <div className="font-sans bg-zinc-500 text-white p-2 rounded-xl text-center w-full">
+                {event.timeLeft.seconds}
+              </div>
+              <div className="font-sans bg-zinc-500 text-white p-2 rounded-xl text-center w-full">
+                {event.timeLeft.minutes}
+              </div>
+              <div className="font-sans bg-zinc-500 text-white p-2 rounded-xl text-center w-full">
+                {event.timeLeft.hours}
+              </div>
+              <div className="font-sans bg-zinc-500 text-white p-2 rounded-xl text-center w-full">
+                {event.timeLeft.days}
+              </div>
+            </div>
+
           </div>
         ))}
       </div>
-      <div className="container pb-5 pt-2 px-5 m-auto">
+      {/* <div className="container pb-5 pt-2 px-5 m-auto">
         <div className="px-6 py-6 mb-3 shadow-[0_0_15px_rgb(0_0_0_/_5%)] border border-gray-200 rounded-md bg-white dark:bg-stone-900 dark:border dark:border-stone-600">
           <span className="text-lime-600">ملاحظة :</span>
           <span className="">
-            يحتفل بعيد الفطر والاضحي فقط والاحتفال بغير ذالك بدعة تم ذكر المناسبات للمعرفه لا للاحتفال
+            
           </span>
         </div>
-      </div>
+      </div> */}
     </>
   );
 };

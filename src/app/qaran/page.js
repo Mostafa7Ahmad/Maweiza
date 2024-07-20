@@ -18,7 +18,7 @@ export const metadata = {
 export default async function () {
     return (
         <>
-            <Landing title="قسم القران الكريم" text="" />
+            <Landing title="قسم القران الكريم" text="اذا كنت تريد الاستماع الي تلاوه القران الكريم اختر وضع الاستماع لانه يحتوي علي عدد كبير من الشيوخ اما اذا كنت تريد الحفظ فختر وضع الحفظ لكي تتمكن من تحديد الايه التي تريد حفظها مع امكانيه التكرار وغيرها" />
             <section className="py-10 relative">
                 <div className="container gap-5 flex flex-col m-auto px-3 md:grid md:gap-10 md:grid-cols-1 lg:grid-cols-2">
                     <div className="shadow-[0_0_15px_rgb(0_0_0_/_5%)] border border-gray-200 rounded-lg bg-white dark:bg-[#191919] dark:border dark:border-stone-700">

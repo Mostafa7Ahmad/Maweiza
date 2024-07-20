@@ -169,7 +169,7 @@ function Footer() {
                             src="/logo.png"
                             alt="img"
                         />
-                        <p className="text text-gray-800 dark:text-gray-300">
+                        <p className="text text-gray-800 dark:text-gray-300 text-sm">
                             موقع إسلامي يوجد به القرآن الكريم وتفسير القران
                             الكريم والحديث الشريف واذكار وأدعيه والاقتباسات
                             الاسلاميه واوقات الصلاه والمزيد
