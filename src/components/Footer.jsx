@@ -174,9 +174,6 @@ function Footer() {
                             الكريم والحديث الشريف واذكار وأدعيه والاقتباسات
                             الاسلاميه واوقات الصلاه والمزيد
                         </p>
-                        <div className="text-center text-gray-800 dark:text-gray-300 mt-5">
-                            (صدقه جاريه)
-                        </div>
                     </div>
                     <div className="box">
                         <ul className="links max-md:my-12">{navLinks1}</ul>

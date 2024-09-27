@@ -124,7 +124,7 @@
 }
 
 .header {
-    background-image: url(../images/back-1.png);
+    /* background-image: url(../images/back-1.png); */
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
