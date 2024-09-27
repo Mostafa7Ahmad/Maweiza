@@ -1,5 +1,11 @@
 
-![Logo](https://github.com/Mostafa7Ahmad/Maweiza/blob/master/public/logo.png?raw=true)
+<div style="text-align: center;">
+  <img 
+    src="https://github.com/Mostafa7Ahmad/Maweiza/blob/master/public/logo.png?raw=true" 
+    alt="Logo" 
+    style="width: 150px; height: auto;" 
+  />
+</div>
 
 
 # Maweiza
