@@ -10,8 +10,8 @@ import "moment/dist/locale/ar-dz";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-import Loader from "@/components/Loader";
-import Landing from "./Landing";
+import Loader from "@/components/Assets/Loader";
+import Landing from "../Assets/Landing";
 
 moment.locale("ar");
 

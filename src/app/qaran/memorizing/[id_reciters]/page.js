@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import Landing from "@/components/Landing";
+import Landing from "@/components/Assets/Landing";
 import Sur from "@/components/Qaran/Surs";
 
 export default async function ({ params }) {

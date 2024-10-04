@@ -3,7 +3,7 @@ import Link from "next/link";
 import listen from "@/images/listen.jpeg";
 import memorizing from "@/images/memorizing.jpeg";
 
-import Landing from "@/components/Landing";
+import Landing from "@/components/Assets/Landing";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faHeadphonesSimple,
@@ -15,7 +15,7 @@ export const metadata = {
     description: "يحتوي هذا القسم علي جميع سور القران الكريم مع وضعين",
 };
 
-export default async function () {
+export default async function _() {
     return (
         <>
             <Landing title="قسم القران الكريم" text="اذا كنت تريد الاستماع الي تلاوه القران الكريم اختر وضع الاستماع لانه يحتوي علي عدد كبير من الشيوخ اما اذا كنت تريد الحفظ فختر وضع الحفظ لكي تتمكن من تحديد الايه التي تريد حفظها مع امكانيه التكرار وغيرها" />

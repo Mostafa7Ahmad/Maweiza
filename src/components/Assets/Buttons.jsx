@@ -24,7 +24,7 @@ function Buttons() {
         window.addEventListener("scroll", function () {
             window.scrollY >= 500 ? setBtnClass("show") : setBtnClass("");
         });
-    }, []);
+    }, [cookies]);
 
     function themeEdit() {
         if (dark) {

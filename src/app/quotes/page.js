@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import Landing from "@/components/Landing";
+import Landing from "@/components/Assets/Landing";
 import Quotes from "@/components/Quote/Quotes";
 
 export const metadata = {
@@ -8,7 +8,7 @@ export const metadata = {
     description: "يحتوي هذا القسم علي اقتباسات للائمه والعلماء",
 };
 
-export default function () {
+export default function _() {
 
     return (
         <>

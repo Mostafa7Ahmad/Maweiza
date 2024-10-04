@@ -1,6 +1,6 @@
 import { redirect } from "next/navigation";
 
-export default async function () {
+export default async function _() {
     redirect("/books/1");
     return (
         <section className="pt-52 pb-5">

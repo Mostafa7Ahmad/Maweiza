@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import sur from "@/json/sur";
-import Search from "../Search";
+import Search from "../web/Search";
 
 export default function Tafsir() {
     let [dataTafsir, setDataTafsir] = useState(sur.data.surahs.references);

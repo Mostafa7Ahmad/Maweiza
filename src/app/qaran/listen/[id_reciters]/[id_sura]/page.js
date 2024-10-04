@@ -3,7 +3,7 @@
 import AudioPlayer from "react-h5-audio-player";
 import "@/app/audio.css";
 
-import Landing from "@/components/Landing";
+import Landing from "@/components/Assets/Landing";
 
 export default async function ({ params }) {
     const idRecitations = params.id_reciters;

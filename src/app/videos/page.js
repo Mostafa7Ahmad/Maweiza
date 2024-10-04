@@ -1,6 +1,6 @@
 import { redirect } from "next/navigation";
 
-export default async function () {
+export default async function _() {
     redirect("/videos/1");
 
     return (

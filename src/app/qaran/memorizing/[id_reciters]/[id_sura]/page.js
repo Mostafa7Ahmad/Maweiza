@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import AudioPlayer from "react-h5-audio-player";
 import "@/app/audio.css";
 
-import Landing from "@/components/Landing";
+import Landing from "@/components/Assets/Landing";
 import Aya from "./Aya";
 
 import memorizingAll from "@/json/memorizingAll.json";

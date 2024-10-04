@@ -1,4 +1,4 @@
-import Landing from "@/components/Landing";
+import Landing from "@/components/Assets/Landing";
 
 export default async function ({ params }) {
     const id = params.id;

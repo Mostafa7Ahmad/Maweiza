@@ -1,13 +1,13 @@
 import Image from "next/image";
 
-import Landing from "@/components/Landing";
+import Landing from "@/components/Assets/Landing";
 
 export const metadata = {
     title: "موقع موعظه | اسماء الله الحسني ",
     description: "يحتوي هذا القسم علي اسماء الله الحسني ",
 };
 
-export default async function () {
+export default async function _() {
     let reciters = [];
     try {
         let data = await fetch(

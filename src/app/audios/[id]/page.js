@@ -5,7 +5,7 @@ import {
     faRecordVinyl,
 } from "@fortawesome/free-solid-svg-icons";
 
-import Landing from "@/components/Landing";
+import Landing from "@/components/Assets/Landing";
 import Link from "next/link";
 
 export const metadata = {

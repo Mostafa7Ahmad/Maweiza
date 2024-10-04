@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 
-export default function () {
+export default function _() {
     return (
         <>
             <section className="py-5">

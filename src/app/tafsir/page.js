@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import Landing from "@/components/Landing";
+import Landing from "@/components/Assets/Landing";
 import Tafsir from "@/components/Tafsir/Tafsir";
 
 export const metadata = {
@@ -9,7 +9,7 @@ export const metadata = {
     description: 'يحتوي هذا القسم علي تفسير القران بالكامل وعرض جميع معلومات السوره',
 }
 
-export default function () {
+export default function _() {
     return (
         <>
             <Landing title="قسم تفسير القران الكريم" text="يحتوي هذا القسم علي تفسير القران بالكامل وعرض جميع معلومات السوره" />

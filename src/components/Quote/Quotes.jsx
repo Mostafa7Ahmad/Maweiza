@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 
 import quotesAll from "@/json/quotesAll.json";
-import Search from "../Search";
+import Search from "../web/Search";
 
 export default function Quotes() {
     let [data, setData] = useState(quotesAll.authors);

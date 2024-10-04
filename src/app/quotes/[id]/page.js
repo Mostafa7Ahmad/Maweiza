@@ -6,7 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCopy, faShare } from "@fortawesome/free-solid-svg-icons";
 
-import Landing from "@/components/Landing";
+import Landing from "@/components/Assets/Landing";
 
 import quotesAll from "../../../json/quotesAll.json";
 

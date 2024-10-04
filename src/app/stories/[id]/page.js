@@ -1,4 +1,4 @@
-import Landing from "@/components/Landing";
+import Landing from "@/components/Assets/Landing";
 
 import stories from "@/json/stories.json";
 import { Console } from "console";

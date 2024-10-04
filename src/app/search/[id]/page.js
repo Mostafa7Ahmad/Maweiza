@@ -1,7 +1,7 @@
-import Landing from "@/components/Landing";
-import SearchHadith from "@/components/SearchHadith";
+import Landing from "@/components/Assets/Landing";
+import SearchHadith from "@/components/web/SearchHadith";
 
-export default async function ({ params }) {
+export default async function _({ params }) {
     const id = params.id;
 
 

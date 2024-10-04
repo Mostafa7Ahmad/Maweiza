@@ -6,7 +6,7 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import Headroom from "react-headroom";
 
-import { links } from "./links";
+import { links } from "../links";
 
 export default function Navbar() {
     const [menuButton, setMenuButton] = useState(["", ""]);
@@ -35,7 +35,7 @@ export default function Navbar() {
                 <nav className="z-40 relative backdrop-blur-md">
                     <div className="nav bg-[rgb(250_250_250_/_50%)] dark:bg-[#00000021] px-3">
                         <div className="container flex justify-between items-center m-auto py-5 px-3">
-                            <Link href="/">
+                            <Link href="/public">
                                 <Image
                                     loading="lazy"
                                     quality={75}

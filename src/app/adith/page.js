@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import Landing from "@/components/Landing";
+import Landing from "@/components/Assets/Landing";
 import Adiths from "@/components/Adith/Adiths";
 
 export const metadata = {
@@ -9,7 +9,7 @@ export const metadata = {
         "يحتوي هذا القسم علي اكتر من 3500 من الأحاديث النبوية مع عرض جميع معلومات الحديث",
 };
 
-export default async function () {
+export default async function _() {
     return (
         <>
             <Landing

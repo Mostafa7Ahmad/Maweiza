@@ -1,9 +1,9 @@
 import Image from "next/image";
 
-import Landing from "@/components/Landing";
+import Landing from "@/components/Assets/Landing";
 import Reciters from "@/components/Qaran/Reciters";
 
-export default async function () {
+export default async function _() {
     return (
         <>
             <Landing title="قسم حفظ القران الكريم"  />

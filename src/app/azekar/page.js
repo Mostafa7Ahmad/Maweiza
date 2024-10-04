@@ -1,16 +1,16 @@
 import Image from "next/image";
 
-import Landing from "@/components/Landing";
+import Landing from "@/components/Assets/Landing";
 import Azekar from "@/components/Azekar/Azekars";
 import { Suspense } from "react";
-import Loader from "@/components/Loader";
+import Loader from "@/components/Assets/Loader";
 
 export const metadata = {
     title: "موقع موعظه | قسم الاذكار والادعيه",
     description: "يحتوي هذا القسم علي الكثير من الاذكار والادعيه المختلفه",
 };
 
-export default function () {
+export default function _() {
     return (
         <>
             <Landing

@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import recitersJson from "@/json/reciters";
 import memorizingJson from "@/json/memorizingAll";
-import Search from "../Search";
+import Search from "../web/Search";
 
 export default function Reciters(props) {
     let AlReciter = [];

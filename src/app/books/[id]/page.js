@@ -5,10 +5,10 @@ import {
     faDownload,
 } from "@fortawesome/free-solid-svg-icons";
 
-import Landing from "@/components/Landing";
+import Landing from "@/components/Assets/Landing";
 import Link from "next/link";
 
-export default async function ({ params }) {
+export default async function _({ params }) {
     let books = [];
     let links = [];
 
@@ -46,7 +46,7 @@ export default async function ({ params }) {
                     <span>حجم الكتاب</span> : {item.attachments[0].size}
                 </p>
                 <p>
-                    <span>صيغه الكتاب</span> :{" "}
+                    <span>صيغه الكتاب</span> :
                     {item.attachments[0].extension_type}
                 </p>
                 <a

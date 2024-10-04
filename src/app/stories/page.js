@@ -3,7 +3,7 @@ import { faPenRuler } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 
-export default async function () {
+export default async function _() {
     return (
         // <section className="py-10">
         //     <div className="px-4 mx-auto max-w-screen-xl">

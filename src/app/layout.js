@@ -1,9 +1,9 @@
 
 import "./globals.css";
 
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import Buttons from "@/components/Buttons";
+import Navbar from "@/components/Assets/Navbar";
+import Footer from "@/components/Assets/Footer";
+import Buttons from "@/components/Assets/Buttons";
 
 export const metadata = {
     metadataBase: new URL("https://maweiza.vercel.app"),

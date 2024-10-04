@@ -111,18 +111,6 @@ export const categoriesLinks = [
         img: children.src,
         new: true,
     },
-    // {
-    //     name: "قصص الانبياء",
-    //     path: "/stories",
-    //     img: stories.src,
-    //     new: true,
-    // },
-    // {
-    //     name: "حساب الذكاه",
-    //     path: "/zakat",
-    //     img: zakat.src,
-    //     new: true,
-    // }
 ];
 
 export default function Categories() {
@@ -131,10 +119,10 @@ export default function Categories() {
             key={key}
             className="shadow-[0_0_15px_rgb(0_0_0_/_5%)] border border-gray-200 rounded-lg bg-white dark:bg-[#191919] dark:border dark:border-stone-700 relative"
         >
-                {(item.new) ? <div className="label">قسم جديد</div> : null}
+            {(item.new) ? <div className="label">قسم جديد</div> : null}
             <div className="m-5 overflow-hidden rounded-md">
-                
-                <img src={item.img} className="md:w-full md:h-60" alt="" />
+
+                <img src={item.img} className="md:w-full object-cover md:h-60" alt="" />
             </div>
             <Link
                 className="flex justify-center rounded-md m-5 p-3 text-white bg-gradient-to-r from-green-600 to-lime-500 hover:scale-105 active:scale-90 transition-all"
@@ -169,6 +157,8 @@ export default function Categories() {
                     alt="img"
                 />
             </section>
+
+
         </>
     );
 }

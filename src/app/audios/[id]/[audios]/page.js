@@ -1,4 +1,4 @@
-import Landing from "@/components/Landing";
+import Landing from "@/components/Assets/Landing";
 import { faHeadphones } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";

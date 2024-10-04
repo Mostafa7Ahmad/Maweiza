@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Adith from "@/json/adith";
-import Search from "../Search";
+import Search from "../web/Search";
 
 export default function Adiths() {
     let [dataAdiths, setDataAdiths] = useState(Adith);

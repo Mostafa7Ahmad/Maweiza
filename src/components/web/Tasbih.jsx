@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import Landing from "./Landing";
+import Landing from "../Assets/Landing";
 
 function Tasbih() {
     let [tasbih, setTasbih] = useState(0);

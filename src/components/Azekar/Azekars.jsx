@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import azekar from "@/json/azekar";
-import Search from "../Search";
+import Search from "../web/Search";
 
 export default function Azekar() {
     let [dataAzekar, setDataAzekar] = useState(azekar);

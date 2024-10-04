@@ -1,12 +1,7 @@
 
-<div style="text-align: center;">
-  <img 
-    src="https://github.com/Mostafa7Ahmad/Maweiza/blob/master/public/logo.png?raw=true" 
-    alt="Logo" 
-    style="width: 150px; height: auto;" 
-  />
-</div>
-
+<center>
+<img src="https://github.com/Mostafa7Ahmad/Maweiza/blob/master/public/logo.png?raw=true" alt="Logo" style="width: 150px; height: auto;" />
+</center>
 
 # Maweiza
 
@@ -18,7 +13,6 @@ Discover a world of knowledge and science with our website dedicated to providin
 - Fullscreen mode
 - Cross platform
 
-
 ## Optimizations
 
 none
@@ -26,8 +20,6 @@ none
 ## Screenshots
 
 ![App Screenshot](https://github.com/Mostafa7Ahmad/Maweiza/blob/master/screenshots/1.jpg?raw=true)
-
-
 
 ## Run Locally
 
@@ -55,13 +47,10 @@ Start the server
   npm run dev
 ```
 
-
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
 
-
 ## Support
 
-For support, email zn327855@gmail.com or join our Slack channel.
-
+For support, email <zn327855@gmail.com> or join our Slack channel.

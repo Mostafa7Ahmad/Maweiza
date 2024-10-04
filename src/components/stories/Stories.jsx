@@ -3,8 +3,8 @@
 import { useState } from "react";
 import Link from "next/link";
 import stories from "@/json/stories";
-import Search from "../Search";
-import Landing from "../Landing";
+import Search from "../web/Search";
+import Landing from "../Assets/Landing";
 
 export default function Stories() {
     let [dataStories, setDataStories] = useState(stories);
