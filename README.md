@@ -26,25 +26,25 @@ none
 Clone the project
 
 ```bash
-  git clone git@github.com:Mostafa7Ahmad/Maweiza.git
+git clone git@github.com:Mostafa7Ahmad/Maweiza.git
 ```
 
 Go to the project directory
 
 ```bash
-  cd Maweiza
+cd Maweiza
 ```
 
 Install dependencies
 
 ```bash
-  npm install
+npm install
 ```
 
 Start the server
 
 ```bash
-  npm run dev
+npm run dev
 ```
 
 ## License

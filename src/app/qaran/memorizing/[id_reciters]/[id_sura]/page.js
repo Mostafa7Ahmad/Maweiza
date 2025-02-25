@@ -8,9 +8,9 @@ import "@/app/audio.css";
 import Landing from "@/components/Assets/Landing";
 import Aya from "./Aya";
 
-import memorizingAll from "@/json/memorizingAll.json";
+import memorizingAll from "@/data/memorizingAll.json";
 
-export default function ({ params }) {
+export default function _({ params }) {
     const idRecitations = params.id_reciters;
     const id = params.id_sura;
 

@@ -1,60 +1,12 @@
-"use client";
 
-import { useEffect, useState } from "react";
-import { motion, AnimatePresence } from 'framer-motion';
-// import localStorage from "local-storage";
-import Cookie from 'cookie-universal'
+import Image from 'next/image';
 
-const spinnerVariants = {
-    initial: { opacity: 1 },
-    exit: { opacity: 0, transition: { duration: 0.5 } }
-};
-
-export default function SplashScreen(props) {
-    const [isLoading, setIsLoading] = useState(true);
-
-    const cookies = Cookie()
-
-    const theme = cookies.get("theme") ?? "light";
-
-    if (props.show ?? true) {
-        useEffect(() => {
-            // Simulating some delay to show loading screen
-            const timer = setTimeout(() => {
-                setIsLoading(false);
-            }, 1000);
-
-            return () => clearTimeout(timer);
-        }, []);
-    }
-
+export default function SplashScreen() {
     return (
         <>
-            {(props.show ?? true) ?
-                <AnimatePresence>
-                    {isLoading && (
-                        <motion.div
-                            key="loadingScreen"
-                            className={"splash-screen " + theme}
-                            initial="initial"
-                            exit="exit"
-                            variants={spinnerVariants}
-                        >
-                            <div className="loader"></div>
-                        </motion.div>
-                    )}
-                </AnimatePresence>
-                :
-                <div
-                    key="loadingScreen"
-                    className={"splash-screen " + theme}
-                    initial="initial"
-                    exit="exit"
-                    variants={spinnerVariants}
-                >
-                    <div className="loader"></div>
-                </div>
-            }
+            <div className='h-screen w-full flex items-center justify-center'>
+                <Image src="/loading.gif" width={200} height={200} alt='' className='rounded-full' />
+            </div>
         </>
     );
 }

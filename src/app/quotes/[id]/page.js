@@ -8,9 +8,9 @@ import { faCopy, faShare } from "@fortawesome/free-solid-svg-icons";
 
 import Landing from "@/components/Assets/Landing";
 
-import quotesAll from "../../../json/quotesAll.json";
+import quotesAll from "@/data/quotesAll.json";
 
-export default function ({ params }) {
+export default function _({ params }) {
     const id = params.id;
 
     const filterData = quotesAll.result.filter(

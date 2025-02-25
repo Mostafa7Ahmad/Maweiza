@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import azekar from "@/json/azekar";
+import azekar from "@/data/azekar";
 import Search from "../web/Search";
 
 export default function Azekar() {
@@ -32,8 +32,7 @@ export default function Azekar() {
         <Link
             href={`/azekar/${item.id}`}
             key={key}
-            className="flex transition-all flex-row justify-between p-5 border-2 border-solid bg-white dark:border-gray-500 dark:bg-[#191919] rounded-sm items-center dark:hover:border-lime-600 dark:hover:bg-gradient-to-r dark:hover:from-green-600 dark:hover:to-lime-500 hover:bg-gradient-to-r hover:from-green-600 hover:to-lime-500 hover:border-none active:scale-90 hover:text-white"
-        >
+            className="flex transition-all flex-row justify-between p-5 border-2 border-solid bg-white dark:border-gray-500 dark:bg-[#191919] rounded-sm items-center dark:hover:border-lime-600 dark:hover:bg-gradient-to-r dark:hover:from-green-600 dark:hover:to-lime-500 hover:bg-gradient-to-r hover:from-green-600 hover:to-lime-500 hover:border-none active:scale-90 hover:text-white">
             {item.category}
         </Link>
     ));

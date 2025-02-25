@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 
-import quotesAll from "@/json/quotesAll.json";
+import quotesAll from "@/data/quotesAll.json";
 import Search from "../web/Search";
 
 export default function Quotes() {

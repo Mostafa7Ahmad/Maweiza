@@ -12,7 +12,7 @@ import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import Landing from "../Assets/Landing";
-import azekar from "@/json/azekar.json";
+import azekar from "@/data/azekar.json";
 import Image from "next/image";
 
 export default function Azekar() {

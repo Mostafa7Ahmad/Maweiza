@@ -22,7 +22,7 @@ export default function EventsTimer() {
   useEffect(() => {
     const calculateTimeLeft = (eventDate) => {
       const now = new Date();
-      const timeDifference = eventDate - now;
+      const timeDifference = eventDate - Number(now);
 
       if (timeDifference <= 0) {
         return 'اليوم';
@@ -82,7 +82,6 @@ export default function EventsTimer() {
               <div className="text-center w-full">الساعات</div>
               <div className="text-center w-full">الأيام</div>
             </div>
-
             <div className="w-full gap-3 text-xl rounded-xl flex justify-between items-center">
               {typeof event.timeLeft === 'string' ? (
                 <div className="text-center w-full">{event.timeLeft}</div>

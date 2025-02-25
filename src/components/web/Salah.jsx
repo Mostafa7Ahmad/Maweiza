@@ -228,7 +228,7 @@ export default function Salah() {
                                     )}
                                 </span>
                                 {((nextPrayerIndex === 0) ? <>
-                                    <span span className="block mt-3 text-sm"> الصلاة التالية </span>
+                                    <span className="block mt-3 text-sm"> الصلاة التالية </span>
                                     <span className="block font-sans text-3xl">
                                         {remainingTime.h}:{remainingTime.m}:{remainingTime.s}
                                     </span>
@@ -242,7 +242,7 @@ export default function Salah() {
                                     )}
                                 </span>
                                 {((nextPrayerIndex === 1) ? <>
-                                    <span span className="block mt-3 text-sm"> الصلاة التالية </span>
+                                    <span className="block mt-3 text-sm"> الصلاة التالية </span>
                                     <span className="block font-sans text-3xl">
                                         {remainingTime.h}:{remainingTime.m}:{remainingTime.s}
                                     </span>
@@ -256,7 +256,7 @@ export default function Salah() {
                                     )}
                                 </span>
                                 {((nextPrayerIndex === 2) ? <>
-                                    <span span className="block mt-3 text-sm"> الصلاة التالية </span>
+                                    <span className="block mt-3 text-sm"> الصلاة التالية </span>
                                     <span className="block font-sans text-3xl">
                                         {remainingTime.h}:{remainingTime.m}:{remainingTime.s}
                                     </span>
@@ -270,7 +270,7 @@ export default function Salah() {
                                     )}
                                 </span>
                                 {((nextPrayerIndex === 3) ? <>
-                                    <span span className="block mt-3 text-sm"> الصلاة التالية </span>
+                                    <span className="block mt-3 text-sm"> الصلاة التالية </span>
                                     <span className="block font-sans text-3xl">
                                         {remainingTime.h}:{remainingTime.m}:{remainingTime.s}
                                     </span>
@@ -284,7 +284,7 @@ export default function Salah() {
                                     )}
                                 </span>
                                 {((nextPrayerIndex === 4) ? <>
-                                    <span span className="block mt-3 text-sm"> الصلاة التالية </span>
+                                    <span className="block mt-3 text-sm"> الصلاة التالية </span>
                                     <span className="block font-sans text-3xl">
                                         {remainingTime.h}:{remainingTime.m}:{remainingTime.s}
                                     </span>

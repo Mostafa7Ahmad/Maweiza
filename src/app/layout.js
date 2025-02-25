@@ -4,6 +4,33 @@ import "./globals.css";
 import Navbar from "@/components/Assets/Navbar";
 import Footer from "@/components/Assets/Footer";
 import Buttons from "@/components/Assets/Buttons";
+import localFont from "next/font/local";
+import Script from "next/script";
+
+const cairo = localFont({
+    src: [
+        {
+            path: "../font/Cairo-Light.woff2",
+            weight: "300",
+        },
+        {
+            path: "../font/Cairo-Regular.woff2",
+            weight: "400",
+        },
+        {
+            path: "../font/Cairo-Bold.woff2",
+            weight: "700",
+        },
+        {
+            path: "../font/Cairo-Black.woff2",
+            weight: "900",
+        },
+    ],
+    variable: "--cairo",
+    weight: "300 400 700 900",
+    display: "swap",
+});
+
 
 export const metadata = {
     metadataBase: new URL("https://maweiza.vercel.app"),
@@ -23,7 +50,6 @@ export const metadata = {
     },
 };
 
-
 export default function RootLayout({ children }) {
     return (
         <html lang="ar" className="scroll-smooth" dir="rtl">
@@ -32,11 +58,9 @@ export default function RootLayout({ children }) {
                     name="google-adsense-account"
                     content="ca-pub-2830940611983404"
                 />
-                <script
-                    dangerouslySetInnerHTML={{
-                        __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-WBZJG335');`,
-                    }}
-                />
+                <Script id="google-analytics" strategy="afterInteractive">
+                    {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-WBZJG335');`}
+                </Script>
             </head>
             <body className="bg-[rgb(250,250,250)] text-sm header dark:bg-[#000000f2] dark:text-white transition-colors selection:bg-lime-600 selection:text-white">
                 <iframe
@@ -45,7 +69,7 @@ export default function RootLayout({ children }) {
                     width="0"
                 >
                 </iframe>
-                <main className="relative">
+                <main className={`${cairo.variable} relative font-cairo antialiased`}>
                     <Navbar />
                     {children}
                     <Footer />

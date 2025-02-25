@@ -8,6 +8,9 @@ import Headroom from "react-headroom";
 
 import { links } from "../links";
 
+import zena from "@/images/zena.png";
+import ramadanMode from "@/helpers/ramadanMode";
+
 export default function Navbar() {
     const [menuButton, setMenuButton] = useState(["", ""]);
     const [isOpen, setIsOpen] = useState(false);
@@ -31,9 +34,9 @@ export default function Navbar() {
 
     return (
         <>
-            <Headroom className="fixed z-50 top-0 left-0 right-0">
-                <nav className="z-40 relative backdrop-blur-md">
-                    <div className="nav bg-[rgb(250_250_250_/_50%)] dark:bg-[#00000021] px-3">
+            <Headroom className="fixed z-50 md:top-5 top-0 left-0 right-0 container mx-auto transition-all">
+                <nav className="z-40 relative backdrop-blur-md border rounded-xl dark:border-zinc-700 shadow-sm">
+                    <div className="nav bg-[rgb(250_250_250_/_80%)] dark:bg-[rgba(0,0,0,0.5)] px-3">
                         <div className="container flex justify-between items-center m-auto py-5 px-3">
                             <Link href="/public">
                                 <Image
@@ -67,7 +70,7 @@ export default function Navbar() {
                                         height:
                                             menuButton[1] == "show"
                                                 ? nav.current.scrollHeight +
-                                                  "px"
+                                                "px"
                                                 : "initial",
                                     }}
                                     className={"flex gap-[10px] list-none max-[992px]:bg-[#fafafaeb] max-[992px]:dark:bg-[#000000a6] " + (menuButton[1] == "show" ? nav.current.scrollHeight + "" : "hide")}
@@ -79,6 +82,7 @@ export default function Navbar() {
                     </div>
                 </nav>
             </Headroom>
+            {ramadanMode() && <img src={zena.src} className="zena" />}
         </>
     );
 }

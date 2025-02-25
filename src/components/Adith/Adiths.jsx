@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import Adith from "@/json/adith";
+import Adith from "@/data/adith";
 import Search from "../web/Search";
 
 export default function Adiths() {

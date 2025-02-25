@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import recitersJson from "@/json/reciters";
-import memorizingJson from "@/json/memorizingAll";
+import recitersJson from "@/data/reciters";
+import memorizingJson from "@/data/memorizingAll";
 import Search from "../web/Search";
 
 export default function Reciters(props) {

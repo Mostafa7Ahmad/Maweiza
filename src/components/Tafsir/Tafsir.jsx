@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import sur from "@/json/sur";
+import sur from "@/data/sur";
 import Search from "../web/Search";
 
 export default function Tafsir() {

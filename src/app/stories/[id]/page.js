@@ -1,9 +1,9 @@
 import Landing from "@/components/Assets/Landing";
 
-import stories from "@/json/stories.json";
+import stories from "@/data/stories.json";
 import { Console } from "console";
 
-export default function ({ params }) {
+export default function _({ params }) {
     const id = params.id;
 
     const filterData = stories.filter((item) => item.id === Number(id))[0];
