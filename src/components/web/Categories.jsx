@@ -12,7 +12,7 @@ export default function Categories() {
         return (
             item.ramadan ?
                 ramadan &&
-                <div key={key}>
+                <div key={key} className="relative overflow-hidden">
                     <div className="shadow-[0_0_15px_rgb(0_0_0_/_5%)] border border-gray-200 rounded-lg bg-white dark:bg-[#191919] dark:border dark:border-stone-700 relative">
                         {(item.new) && <div className="label">قسم جديد</div>}
                         {(item.ramadan) && <span className="absolute top-5 right-5 bg-red-500 text-white text-xs px-2 py-1 rounded-full">
@@ -30,7 +30,7 @@ export default function Categories() {
                     </div>
                 </div>
                 :
-                <div key={key}>
+                <div key={key} className="relative overflow-hidden">
                     <div className="shadow-[0_0_15px_rgb(0_0_0_/_5%)] border border-gray-200 rounded-lg bg-white dark:bg-[#191919] dark:border dark:border-stone-700 relative">
                         {(item.new) && <div className="label">قسم جديد</div>}
                         <div className="animate-border-beam"></div>

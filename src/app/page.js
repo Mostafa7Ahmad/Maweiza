@@ -45,7 +45,7 @@ export default function Home() {
 
     return (
         <>
-            <div className="hero">
+            <div className="hero max-md:pt-28">
                 <div className="container mx-auto relative h-screen p-10 mt-[120px] lg:mt-2 flex items-center justify-center max-md:pb-36">
                     <div className="mx-4 flex max-md:flex-wrap max-lg:justify-between justify-items-center items-center">
                         <div className="hero-content backdrop-blur-md bg-[rgb(250_250_250_/_80%)] dark:bg-[rgba(0,0,0,0.5)] p-5 max-md:border max-md:dark:border-zinc-700">
