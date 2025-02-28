@@ -104,15 +104,16 @@ function Footer() {
                                 </p>
                                 <div className="mt-5 flex justify-center gap-2">
                                     <a
+                                        aria-label="link profile facebook"
                                         href="https://www.facebook.com/profile.php?id=100074054749083"
-                                        className="text-lime-600 border dark:border-stone-700 hover:bg-lime-600 hover:text-white focus:outline-none font-medium p-2.5 text-center inline-flex items-center"
-                                    >
+                                        className="text-lime-600 border dark:border-stone-700 hover:bg-lime-600 hover:text-white focus:outline-none font-medium p-2.5 text-center inline-flex items-center">
                                         <FontAwesomeIcon
                                             className="w-4 h-4"
                                             icon={faFacebook}
                                         />
                                     </a>
                                     <a
+                                        aria-label="link profile github"
                                         href="https://github.com/Mostafa7Ahmad/"
                                         className="text-lime-600 border dark:border-stone-700 hover:bg-lime-600 hover:text-white focus:outline-none font-medium p-2.5 text-center inline-flex items-center">
                                         <FontAwesomeIcon icon={faGithub} />

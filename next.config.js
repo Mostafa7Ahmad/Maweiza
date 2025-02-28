@@ -11,8 +11,12 @@ const withPWA = require('next-pwa')({
 
 module.exports = {
   ...withPWA,
-  reactStrictMode: false,
-  rules: {
-    '@next/next/no-async-client-component': 'off',
+  // reactStrictMode: false,
+  // webpack: (config) => {
+  //   config.module.rules.push({ '@next/next/no-async-client-component': 'off' })
+  //   return config
+  // },
+  experimental: {
+    browsersListForSwc: true,
   },
 };

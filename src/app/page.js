@@ -64,12 +64,12 @@ export default function Home() {
                         <div className="px-4 max-md:mx-auto">
                             <div className="lg:ml-auto lg:text-right">
                                 <div className="relative z-10 inline-block pt-11 lg:pt-0">
-                                    <Image src="/4159264.webp" quality={40} width={400} height={400} alt="hero" className="max-w-full mx-auto up-and-down my-10" />
+                                    <Image src="/4159264.webp" priority quality={60} width={200} height={200} alt="hero" className="h-96 w-full object-contain mx-auto up-and-down my-10" />
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <a href="#categories" className="go-down -bottom-24 text-lime-600 transition-colors text-xl hover:text-lime-700">
+                    <a href="#categories" className="go-down -bottom-24 text-lime-600 transition-colors text-xl hover:text-lime-700" aria-label="Read more categories">
                         <FontAwesomeIcon icon={faAngleDoubleDown} />
                     </a>
                 </div>
