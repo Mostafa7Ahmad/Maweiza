@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Landing from "@/components/Layout/Landing";
-import QuizApp from '@/components/quiz/QuizApp';
+import QuizApp from '@/components/Quiz/QuizApp';
 import data from '@/data/questions.json';
 
 

@@ -1,7 +1,7 @@
 
 "use client";
 
-import Categories from "@/components/home/Categories";
+import Categories from "@/components/Home/Categories";
 
 import { faAngleDoubleDown, faDownload } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

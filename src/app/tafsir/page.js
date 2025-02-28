@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 import Landing from "@/components/Layout/Landing";
-import Tafsir from "@/components/tafsir/Tafsir";
+import Tafsir from "@/components/Tafsir/Tafsir";
 
 export const metadata = {
     title: 'موقع موعظه | قسم تفسير القران الكريم',

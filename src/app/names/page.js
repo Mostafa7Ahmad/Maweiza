@@ -1,6 +1,6 @@
 import Landing from "@/components/Layout/Landing";
 
-import Name from "@/components/names";
+import Name from "@/components/Names";
 
 export const metadata = {
     title: "موقع موعظه | اسماء الله الحسني ",
