@@ -1,5 +1,5 @@
-import CategoriesAdith from "@/components/adith/Adith";
-import Landing from "@/components/layout/Landing";
+import CategoriesAdith from "@/components/Adith/Adith";
+import Landing from "@/components/Layout/Landing";
 
 export default async function _({ params }) {
     const id = params.id;

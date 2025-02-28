@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import Landing from "@/components/layout/Landing";
+import Landing from "@/components/Layout/Landing";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeadphonesSimple, faMicrophoneLines, } from "@fortawesome/free-solid-svg-icons";
 import Image from "next/image";

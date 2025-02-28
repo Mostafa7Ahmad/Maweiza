@@ -1,4 +1,4 @@
-import Landing from "@/components/layout/Landing";
+import Landing from "@/components/Layout/Landing";
 
 import Name from "@/components/names";
 

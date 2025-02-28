@@ -1,5 +1,5 @@
-import Landing from "@/components/layout/Landing";
-import SearchHadith from "@/components/adith/SearchHadith";
+import Landing from "@/components/Layout/Landing";
+import SearchHadith from "@/components/Adith/SearchHadith";
 import { optimizeString } from "@/helpers/optimizeString";
 
 export default async function _({ params }) {

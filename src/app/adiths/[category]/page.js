@@ -1,9 +1,8 @@
-import CategoryAdith from "@/components/adith/CategoryAdith";
-import Landing from "@/components/layout/Landing";
+import CategoryAdith from "@/components/Adith/CategoryAdith";
+import Landing from "@/components/Layout/Landing";
 
 export default async function _({ params }) {
     const category = params.category;
-    console.log(category)
 
     return (
         <>

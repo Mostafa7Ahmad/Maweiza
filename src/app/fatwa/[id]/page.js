@@ -5,7 +5,7 @@ import {
     faDownload,
 } from "@fortawesome/free-solid-svg-icons";
 
-import Landing from "@/components/layout/Landing";
+import Landing from "@/components/Layout/Landing";
 import Link from "next/link";
 
 export const metadata = {

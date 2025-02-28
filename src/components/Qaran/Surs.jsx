@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import surJson from "@/data/sur.json";
 import reciters from "@/data/reciters.json";
-import Search from "../layout/Search";
+import Search from "../Layout/Search";
 import { optimizeString } from "@/helpers/optimizeString";
 
 export default function Surs(props) {

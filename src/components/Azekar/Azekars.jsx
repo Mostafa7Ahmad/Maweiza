@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import azekar from "@/data/azekar.json";
-import Search from "../layout/Search";
+import Search from "../Layout/Search";
 import { optimizeString } from "@/helpers/optimizeString";
 
 export default function Azekar() {

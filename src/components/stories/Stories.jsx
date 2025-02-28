@@ -3,8 +3,8 @@
 import { useState } from "react";
 import Link from "next/link";
 import stories from "@/data/stories.json";
-import Search from "../layout/Search";
-import Landing from "../layout/Landing";
+import Search from "../Layout/Search";
+import Landing from "../Layout/Landing";
 import { optimizeString } from "@/helpers/optimizeString";
 
 export default function Stories() {

@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Adith from "@/data/adith.json";
-import Search from "../layout/Search";
+import Search from "../Layout/Search";
 import { optimizeString } from "@/helpers/optimizeString";
 
 export default function CategoriesAdith() {

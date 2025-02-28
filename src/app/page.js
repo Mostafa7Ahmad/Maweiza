@@ -24,7 +24,6 @@ export default function Home() {
         });
 
         window.addEventListener("appinstalled", () => {
-            console.log("تم تثبيت التطبيق!");
             setIsInstalled(true);
         });
     }, []);
@@ -34,7 +33,6 @@ export default function Home() {
             deferredPrompt.prompt();
             deferredPrompt.userChoice.then((choice) => {
                 if (choice.outcome === "accepted") {
-                    console.log("تم تثبيت التطبيق");
                     setIsInstalled(true);
                 }
                 setDeferredPrompt(null);

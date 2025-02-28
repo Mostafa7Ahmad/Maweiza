@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDoubleLeft, faAngleDoubleRight, faDownload, } from "@fortawesome/free-solid-svg-icons";
 
-import Landing from "@/components/layout/Landing";
+import Landing from "@/components/Layout/Landing";
 import Link from "next/link";
 
 export default async function _({ params }) {

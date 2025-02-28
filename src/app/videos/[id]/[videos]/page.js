@@ -1,4 +1,4 @@
-import Landing from "@/components/layout/Landing";
+import Landing from "@/components/Layout/Landing";
 import { faPhotoFilm } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";

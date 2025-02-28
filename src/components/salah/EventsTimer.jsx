@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import moment from 'moment-hijri';
-import Landing from '../layout/Landing';
+import Landing from '../Layout/Landing';
 
 const islamicEvents = [
   { name: 'رأس السنة الهجرية', hijriMonth: 1, hijriDay: 1 },

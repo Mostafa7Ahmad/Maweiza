@@ -1,7 +1,7 @@
 import Image from "next/image";
 
-import Landing from "@/components/layout/Landing";
-import CategoriesAdith from "@/components/adith/CategoriesAdith";
+import Landing from "@/components/Layout/Landing";
+import CategoriesAdith from "@/components/Adith/CategoriesAdith";
 
 export const metadata = {
     title: "موقع موعظه | قسم الاحاديث",

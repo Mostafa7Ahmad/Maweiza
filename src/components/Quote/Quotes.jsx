@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 
 import quotesAll from "@/data/quotesAll.json";
-import Search from "../layout/Search";
+import Search from "../Layout/Search";
 import { optimizeString } from "@/helpers/optimizeString";
 
 export default function Quotes() {

@@ -6,8 +6,8 @@ import moment from "moment";
 import "moment/dist/locale/ar-dz";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Loader from "@/components/layout/Loader";
-import Landing from "../layout/Landing";
+import Loader from "@/components/Layout/Loader";
+import Landing from "../Layout/Landing";
 import ramadanMode from "@/helpers/ramadanMode";
 
 moment.locale("ar");

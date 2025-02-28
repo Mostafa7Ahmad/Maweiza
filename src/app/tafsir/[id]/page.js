@@ -1,4 +1,4 @@
-import Landing from "@/components/layout/Landing";
+import Landing from "@/components/Layout/Landing";
 import { optimizeString } from "@/helpers/optimizeString";
 
 export default async function _({ params }) {

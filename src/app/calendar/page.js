@@ -1,5 +1,5 @@
 "use client";
-import Landing from "@/components/layout/Landing";
+import Landing from "@/components/Layout/Landing";
 import ramadanMode from "@/helpers/ramadanMode";
 import React, { useState, useEffect } from 'react';
 
@@ -16,10 +16,7 @@ const RamadanSchedule = () => {
     });
     const [loading, setLoading] = useState(true);
     const [currentDay, setCurrentDay] = useState(1);
-    const [location, setLocation] = useState({
-        lat: "30.0444",
-        lng: "31.2357",
-    });
+    const [location, setLocation] = useState({ lat: "30.0444", lng: "31.2357" });
 
     useEffect(() => {
         const initializeLocation = () => {
@@ -66,10 +63,7 @@ const RamadanSchedule = () => {
                 if (!response.ok) throw new Error('فشل جلب البيانات');
                 const { data } = await response.json();
 
-
                 const ramadanDays = data
-                console.log(ramadanDays)
-                console.log(ramadanDays.length)
 
                 if (!ramadanDays.length) throw new Error('لا توجد بيانات لرمضان');
 
@@ -117,7 +111,7 @@ const RamadanSchedule = () => {
                 setRamadanDate({
                     start: defaultStart,
                     end: defaultEnd,
-                    hijriYear: moment().iYear(),
+                    hijriYear: String(moment().iYear()),
                     totalDays: 30
                 });
                 setCurrentDay(moment().isBetween(defaultStart, defaultEnd) ?

@@ -5,7 +5,7 @@ import {
     faDownload,
 } from "@fortawesome/free-solid-svg-icons";
 
-import Landing from "@/components/layout/Landing";
+import Landing from "@/components/Layout/Landing";
 import Link from "next/link";
 
 export const metadata = {
@@ -17,9 +17,7 @@ export default async function _({ params }) {
     let links = [];
 
     try {
-        const response = await fetch(
-            `https://api3.islamhouse.com/v3/paV29H2gm56kvLPy/main/khotab/ar/ar/${params.id}/25/json`
-        );
+        const response = await fetch(`https://api3.islamhouse.com/v3/paV29H2gm56kvLPy/main/khotab/ar/ar/${params.id}/25/json`);
         const data = await response.json();
         khotab = data.data;
         links = data.links;

@@ -11,7 +11,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-import Landing from "../layout/Landing";
+import Landing from "../Layout/Landing";
 import azekar from "@/data/azekar.json";
 import Image from "next/image";
 

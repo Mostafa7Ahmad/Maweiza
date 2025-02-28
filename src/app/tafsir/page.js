@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import Landing from "@/components/layout/Landing";
+import Landing from "@/components/Layout/Landing";
 import Tafsir from "@/components/tafsir/Tafsir";
 
 export const metadata = {

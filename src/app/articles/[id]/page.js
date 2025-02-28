@@ -1,7 +1,7 @@
 
 
-import Landing from "@/components/layout/Landing";
-import Articles from "@/components/articles/Articles";
+import Landing from "@/components/Layout/Landing";
+import Articles from "@/components/Articles/Articles";
 
 export const metadata = {
     title: "موقع موعظه | المقالات ",

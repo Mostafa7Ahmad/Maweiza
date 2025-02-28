@@ -1,9 +1,9 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Landing from "@/components/layout/Landing";
+import Landing from "@/components/Layout/Landing";
 import ramadanMode from "@/helpers/ramadanMode";
-import SplashScreen from "@/components/layout/SplashScreen";
+import SplashScreen from "@/components/Layout/SplashScreen";
 
 // import moment from "moment";
 import moment from 'moment-hijri';
@@ -58,7 +58,7 @@ export default function Page() {
         };
 
         getLocation();
-    }, []);
+    }, [location.lat, location.lng]);
 
     useEffect(() => {
         const fetchRamadanDates = async () => {
@@ -68,7 +68,6 @@ export default function Page() {
 
                 const response = await fetch(url);
                 const data = await response.json();
-                console.log(data.data);
 
                 const ramadanDays = data.data;
 

@@ -1,12 +1,12 @@
 
 import "./globals.css";
 
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
-import Buttons from "@/components/layout/Buttons";
+import Navbar from "@/components/Layout/Navbar";
+import Footer from "@/components/Layout/Footer";
+import Buttons from "@/components/Layout/Buttons";
 import localFont from "next/font/local";
 import Script from "next/script";
-import { SWRProvider } from "@/components/layout/SWRProvider";
+import { SWRProvider } from "@/components/Layout/SWRProvider";
 
 const cairo = localFont({
     src: [

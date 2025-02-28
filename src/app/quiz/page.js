@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from 'react';
-import Landing from "@/components/layout/Landing";
+import Landing from "@/components/Layout/Landing";
 import QuizApp from '@/components/quiz/QuizApp';
 import data from '@/data/questions.json';
 
