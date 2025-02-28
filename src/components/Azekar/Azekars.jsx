@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import azekar from "@/data/azekar";
+import azekar from "@/data/azekar.json";
 import Search from "../layout/Search";
 import { optimizeString } from "@/helpers/optimizeString";
 

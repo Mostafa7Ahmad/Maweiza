@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import stories from "@/data/stories";
+import stories from "@/data/stories.json";
 import Search from "../layout/Search";
 import Landing from "../layout/Landing";
 import { optimizeString } from "@/helpers/optimizeString";

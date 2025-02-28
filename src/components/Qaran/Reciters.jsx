@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import recitersJson from "@/data/reciters";
-import memorizingJson from "@/data/memorizingAll";
+import recitersJson from "@/data/reciters.json";
+import memorizingJson from "@/data/memorizingAll.json";
 import Search from "../layout/Search";
 import { optimizeString } from "@/helpers/optimizeString";
 

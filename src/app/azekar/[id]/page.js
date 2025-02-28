@@ -1,6 +1,6 @@
 import Landing from "@/components/layout/Landing";
 
-import azekar from "@/data/azekar";
+import azekar from "@/data/azekar.json";
 
 export default async function _({ params }) {
     const id = params.id;

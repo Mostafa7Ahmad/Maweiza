@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import surJson from "@/data/sur";
-import reciters from "@/data/reciters";
+import surJson from "@/data/sur.json";
+import reciters from "@/data/reciters.json";
 import Search from "../layout/Search";
 import { optimizeString } from "@/helpers/optimizeString";
 

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import sur from "@/data/sur";
+import sur from "@/data/sur.json";
 import Search from "../layout/Search";
 import { optimizeString } from "@/helpers/optimizeString";
 

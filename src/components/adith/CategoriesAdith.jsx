@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import Adith from "@/data/adith";
+import Adith from "@/data/adith.json";
 import Search from "../layout/Search";
 import { optimizeString } from "@/helpers/optimizeString";
 
