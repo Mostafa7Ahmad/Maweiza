@@ -8,11 +8,13 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Loader from "@/components/Layout/Loader";
 import Landing from "../Layout/Landing";
-import ramadanMode from "@/helpers/ramadanMode";
+import { useRamadan } from "@/context/ramadanContext";
 
 moment.locale("ar");
 
 export default function Salah() {
+    const { ramadan } = useRamadan();
+
     const [timings, setTimings] = useState({
         Fajr: "00:00",
         Dhuhr: "00:00",
@@ -130,7 +132,7 @@ export default function Salah() {
     useEffect(() => {
         let interval = setInterval(() => {
             setupPrayerCountdownTimer();
-            if (ramadanMode()) setupRamadanCountdownTimer();
+            if (ramadan) setupRamadanCountdownTimer();
         }, 1000);
         return () => clearInterval(interval);
     }, [timings]);
@@ -220,7 +222,7 @@ export default function Salah() {
         }
     }, [refreshGps]);
 
-    const ramadan = ramadanMode();
+
 
     return (
         <>

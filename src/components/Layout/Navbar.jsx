@@ -7,11 +7,11 @@ import { useEffect, useRef, useState } from "react";
 import Headroom from "react-headroom";
 
 import { links } from "../../data/links";
-
-
-import ramadanMode from "@/helpers/ramadanMode";
+import { useRamadan } from "@/context/ramadanContext";
 
 export default function Navbar() {
+    const { ramadan } = useRamadan();
+
     const [menuButton, setMenuButton] = useState(["", ""]);
     const [isOpen, setIsOpen] = useState(false);
     let nav = useRef(null);
@@ -82,7 +82,7 @@ export default function Navbar() {
                     </div>
                 </nav>
             </Headroom>
-            {ramadanMode() && <Image src="/zena.png" width={250} height={200} alt="Zena decoration" className="zena" />}
+            {ramadan && <Image src="/zena.png" width={250} height={200} alt="Zena decoration" className="zena" />}
         </>
     );
 }

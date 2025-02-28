@@ -1,10 +1,10 @@
 "use client";
 import Landing from "@/components/Layout/Landing";
-import ramadanMode from "@/helpers/ramadanMode";
 import React, { useState, useEffect } from 'react';
 
 import moment from 'moment-hijri';
 import 'moment/locale/ar';
+import { useRamadan } from "@/context/ramadanContext";
 
 const RamadanSchedule = () => {
     const [prayerTimes, setPrayerTimes] = useState([]);
@@ -206,7 +206,7 @@ const RamadanSchedule = () => {
 };
 
 export default function Page() {
-    const ramadan = ramadanMode();
+    const { ramadan } = useRamadan();
     if (!ramadan) return null;
 
     return (

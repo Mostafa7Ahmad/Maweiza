@@ -2,11 +2,11 @@ import Link from "next/link";
 
 import Image from "next/image";
 
-import ramadanMode from "@/helpers/ramadanMode";
 import { categoriesLinks } from "@/data/links";
+import { useRamadan } from "@/context/ramadanContext";
 
 export default function Categories() {
-    const ramadan = ramadanMode();
+    const { ramadan } = useRamadan();
 
     const showData = categoriesLinks.map((item, key) => {
         return (
@@ -20,7 +20,7 @@ export default function Categories() {
                         </span>}
                         <div className="animate-border-beam"></div>
                         <div className="m-5 overflow-hidden rounded-md">
-                            <Image quality={30} src={item.img} loading="lazy" className="object-contain m-auto" width={50} height={50} alt="" />
+                            <Image quality={20} src={item.img} loading="lazy" className="object-contain m-auto" width={170} height={170} alt="" />
                         </div>
                         <Link
                             className="flex justify-center rounded-md m-5 p-3 text-white bg-gradient-to-r from-green-600 to-lime-500 hover:scale-105 active:scale-90 transition-all"

@@ -2,14 +2,14 @@
 
 import { useState, useEffect } from "react";
 import Landing from "@/components/Layout/Landing";
-import ramadanMode from "@/helpers/ramadanMode";
 import SplashScreen from "@/components/Layout/SplashScreen";
 
 // import moment from "moment";
 import moment from 'moment-hijri';
+import { useRamadan } from "@/context/ramadanContext";
 
 export default function Page() {
-    const ramadan = ramadanMode();
+    const { ramadan } = useRamadan();
 
     const [checks, setChecks] = useState({});
 

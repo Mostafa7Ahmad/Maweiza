@@ -19,4 +19,5 @@ module.exports = {
   experimental: {
     browsersListForSwc: true,
   },
+  formats: ["image/avif", "image/webp"],
 };

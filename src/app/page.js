@@ -64,7 +64,7 @@ export default function Home() {
                         <div className="px-4 max-md:mx-auto">
                             <div className="lg:ml-auto lg:text-right">
                                 <div className="relative z-10 inline-block pt-11 lg:pt-0">
-                                    <Image src="/4159264.webp" priority quality={20} width={300} height={200} alt="hero" className="h-96 w-64 object-contain mx-auto up-and-down" />
+                                    <Image src="/4159264.webp" priority quality={20} width={300} height={200} alt="hero" className="object-contain mx-auto up-and-down mb-10" />
                                 </div>
                             </div>
                         </div>

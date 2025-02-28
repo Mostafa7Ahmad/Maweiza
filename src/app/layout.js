@@ -7,6 +7,7 @@ import Buttons from "@/components/Layout/Buttons";
 import localFont from "next/font/local";
 import Script from "next/script";
 import { SWRProvider } from "@/components/Layout/SWRProvider";
+import { RamadanProvider } from "@/context/ramadanContext";
 
 const cairo = localFont({
     src: [
@@ -64,21 +65,23 @@ export default function RootLayout({ children }) {
                 </Script>
             </head>
             <SWRProvider>
-                <body cz-shortcut-listen="true" className="bg-[rgb(250,250,250)] text-sm header dark:bg-[#000000f2] dark:text-white transition-colors selection:bg-lime-600 selection:text-white">
-                    <iframe
-                        src="https://www.googletagmanager.com/ns.html?id=GTM-WBZJG335"
-                        height="0"
-                        width="0"
-                        title="google tag manager"
-                    >
-                    </iframe>
-                    <main className={`${cairo.variable} relative font-cairo antialiased`}>
-                        <Navbar />
-                        {children}
-                        <Footer />
-                        <Buttons />
-                    </main>
-                </body>
+                <RamadanProvider>
+                    <body cz-shortcut-listen="true" className="bg-[rgb(250,250,250)] text-sm header dark:bg-[#000000f2] dark:text-white transition-colors selection:bg-lime-600 selection:text-white">
+                        <iframe
+                            src="https://www.googletagmanager.com/ns.html?id=GTM-WBZJG335"
+                            height="0"
+                            width="0"
+                            title="google tag manager"
+                        >
+                        </iframe>
+                        <main className={`${cairo.variable} relative font-cairo antialiased`}>
+                            <Navbar />
+                            {children}
+                            <Footer />
+                            <Buttons />
+                        </main>
+                    </body>
+                </RamadanProvider>
             </SWRProvider>
         </html>
     );
