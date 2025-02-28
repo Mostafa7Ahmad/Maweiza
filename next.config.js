@@ -11,7 +11,7 @@ const withPWA = require('next-pwa')({
 
 module.exports = {
   ...withPWA,
-  // reactStrictMode: false,
+  reactStrictMode: false,
   // webpack: (config) => {
   //   config.module.rules.push({ '@next/next/no-async-client-component': 'off' })
   //   return config

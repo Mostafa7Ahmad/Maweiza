@@ -7,6 +7,11 @@
     src: url("../font/ArbFONTS-Amiri-Quran.ttf");
 }
 
+.font-cairo {
+    font-family: var(--cairo);
+}
+
+
 .font-quran {
     font-family: "Quran";
 }

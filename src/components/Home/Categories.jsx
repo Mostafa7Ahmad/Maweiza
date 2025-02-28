@@ -35,7 +35,7 @@ export default function Categories() {
                         {(item.new) && <div className="label">قسم جديد</div>}
                         <div className="animate-border-beam"></div>
                         <div className="m-5 overflow-hidden rounded-md">
-                            <Image quality={30} src={item.img} loading="lazy" className="object-contain m-auto" width={180} height={180} alt="" />
+                            <Image quality={20} src={item.img} loading="lazy" className="object-contain m-auto" width={170} height={170} alt="" />
                         </div>
                         <Link
                             className="flex justify-center rounded-md m-5 p-3 text-white bg-gradient-to-r from-green-600 to-lime-500 hover:scale-105 active:scale-90 transition-all"

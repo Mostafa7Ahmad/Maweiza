@@ -43,11 +43,11 @@ export default function Home() {
 
     return (
         <>
-            <div className="hero max-md:pt-28">
+            <div className="hero pt-10 max-md:pt-32">
                 <div className="container mx-auto relative h-screen p-10 mt-[120px] lg:mt-2 flex items-center justify-center max-md:pb-36">
                     <div className="mx-4 flex max-md:flex-wrap max-lg:justify-between justify-items-center items-center">
                         <div className="hero-content backdrop-blur-md bg-[rgb(250_250_250_/_80%)] dark:bg-[rgba(0,0,0,0.5)] p-5 max-md:border max-md:dark:border-zinc-700">
-                            <h1 className="mb-5 text-3xl max-md:text-4xl max-sm:text-2xl font-bold  text-dark  dark:text-white">
+                            <h1 className="mb-5 text-3xl max-md:text-4xl max-sm:text-2xl font-bold text-dark  dark:text-white">
                                 مرحبا بكم في موقع موعظة
                             </h1>
                             <p className="mb-8 max-w-[480px] text-base text-body-color dark:text-dark-6">
@@ -64,7 +64,7 @@ export default function Home() {
                         <div className="px-4 max-md:mx-auto">
                             <div className="lg:ml-auto lg:text-right">
                                 <div className="relative z-10 inline-block pt-11 lg:pt-0">
-                                    <Image src="/4159264.webp" loading="lazy" quality={30} width={300} height={200} alt="hero" className="h-96 w-full object-contain mx-auto up-and-down my-10" />
+                                    <Image src="/4159264.webp" priority quality={30} width={300} height={200} alt="hero" className="h-96 w-full object-contain mx-auto up-and-down my-10" />
                                 </div>
                             </div>
                         </div>

@@ -11,7 +11,7 @@ export default function Adith({ id }) {
             <>
                 <div className="text-center py-8">
                     <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-green-600 mx-auto"></div>
-                    <p className="mt-4 text-gray-600">جارٍ تحميل بيانات الحديث...</p>
+                    <p className="mt-4 text-gray-600 dark:text-gray-200">جارٍ تحميل بيانات الحديث...</p>
                 </div>
             </>
         );
