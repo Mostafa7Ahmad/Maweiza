@@ -1,6 +1,6 @@
 import { Suspense } from "react";
-import Tasbih from "@/components/web/Tasbih";
-import Azekar from "@/components/web/Azekar";
+import Tasbih from "@/components/tasbih/Tasbih";
+import Azekar from "@/components/azekar/Azekar";
 
 export default function _() {
     return (

@@ -1,9 +1,9 @@
 import Image from "next/image";
 
-import Landing from "@/components/Assets/Landing";
-import Azekar from "@/components/Azekar/Azekars";
+import Landing from "@/components/layout/Landing";
+import Azekar from "@/components/azekar/Azekars";
 import { Suspense } from "react";
-import Loader from "@/components/Assets/Loader";
+import Loader from "@/components/layout/Loader";
 
 export const metadata = {
     title: "موقع موعظه | قسم الاذكار والادعيه",

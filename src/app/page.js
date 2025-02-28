@@ -1,7 +1,7 @@
 
 "use client";
 
-import Categories from "@/components/web/Categories";
+import Categories from "@/components/home/Categories";
 
 import { faAngleDoubleDown, faDownload } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -59,14 +59,14 @@ export default function Home() {
                                 className="flex w-full justify-between items-center rounded-md mt-5 p-3 text-white bg-gradient-to-r from-green-600 to-lime-500 hover:scale-105 active:scale-90 transition-all"
                                 onClick={installPWA}>
                                 تحميل كتطبيق
-                                <FontAwesomeIcon icon={faDownload} />
+                                <FontAwesomeIcon className="text-sm max-h-3" icon={faDownload} />
                             </button>
                             {isInstalled && <p className="text-green-500 mt-5">🎉 التطبيق مثبت بالفعل!</p>}
                         </div>
                         <div className="px-4 max-md:mx-auto">
                             <div className="lg:ml-auto lg:text-right">
                                 <div className="relative z-10 inline-block pt-11 lg:pt-0">
-                                    <Image src="/4159264.webp" width={400} height={400} alt="hero" className="max-w-full mx-auto up-and-down my-10" />
+                                    <Image src="/4159264.webp" quality={40} width={400} height={400} alt="hero" className="max-w-full mx-auto up-and-down my-10" />
                                 </div>
                             </div>
                         </div>

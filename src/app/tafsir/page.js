@@ -1,8 +1,7 @@
-import Link from "next/link";
 import Image from "next/image";
 
-import Landing from "@/components/Assets/Landing";
-import Tafsir from "@/components/Tafsir/Tafsir";
+import Landing from "@/components/layout/Landing";
+import Tafsir from "@/components/tafsir/Tafsir";
 
 export const metadata = {
     title: 'موقع موعظه | قسم تفسير القران الكريم',

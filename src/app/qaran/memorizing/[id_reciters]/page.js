@@ -1,7 +1,7 @@
 import Image from "next/image";
 
-import Landing from "@/components/Assets/Landing";
-import Sur from "@/components/Qaran/Surs";
+import Landing from "@/components/layout/Landing";
+import Sur from "@/components/qaran/Surs";
 
 export default async function ({ params }) {
     return (

@@ -1,8 +1,8 @@
 import Image from "next/image";
 
-import Landing from "@/components/Assets/Landing";
+import Landing from "@/components/layout/Landing";
 
-import Reciters from "@/components/Qaran/Reciters";
+import Reciters from "@/components/qaran/Reciters";
 
 export default async function _() {
     return (

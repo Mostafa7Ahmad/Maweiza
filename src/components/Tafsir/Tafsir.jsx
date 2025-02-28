@@ -3,30 +3,12 @@
 import { useState } from "react";
 import Link from "next/link";
 import sur from "@/data/sur";
-import Search from "../web/Search";
+import Search from "../layout/Search";
+import { optimizeString } from "@/helpers/optimizeString";
 
 export default function Tafsir() {
     let [dataTafsir, setDataTafsir] = useState(sur.data.surahs.references);
     let [massage, setMassage] = useState(false);
-
-    function optimize_string(string) {
-        let text = "";
-        let char = "";
-        for (let index = 0; index < string.length; index++) {
-            char = string[index];
-            char = char.replace("ة", "ه");
-            char = char.replace("ى", "ي");
-            char = char.replace("أ", "ا");
-            char = char.replace("إ", "ا");
-            char = char.replace("آ", "ا");
-            char = char.replace("ٱ", "ا");
-            char = char.replace(/َ|ً|ُ|ٌ|ّ|ٍ|ِ|ْ|ٰ|ٓ|ـ/g, "");
-            char = char.replace(/ۡ|ـ/g, "");
-            char = char.replace("عبد ال", "عبدال");
-            text = text + char;
-        }
-        return text;
-    }
 
     const showData = dataTafsir.map((item, key) => (
         <Link
@@ -34,13 +16,13 @@ export default function Tafsir() {
             href={`/tafsir/${item.number}`}
             className="flex transition-all flex-row justify-center p-5 border-2 border-solid bg-white dark:border-gray-500 dark:bg-[#191919] rounded-sm items-center dark:hover:border-lime-600 dark:hover:bg-gradient-to-r dark:hover:from-green-600 dark:hover:to-lime-500 hover:bg-gradient-to-r hover:from-green-600 hover:to-lime-500 hover:border-none active:scale-90 hover:text-white"
         >
-            {optimize_string(item.name)}
+            {optimizeString(item.name)}
         </Link>
     ));
 
     function handleChange(e) {
         let dataFilter = sur.data.surahs.references.filter((item) =>
-            optimize_string(item.name).includes(optimize_string(e.target.value))
+            optimizeString(item.name).includes(optimizeString(e.target.value))
         );
         setDataTafsir(dataFilter);
         dataFilter.length === 0 ? setMassage(true) : setMassage(false);

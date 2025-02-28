@@ -1,29 +1,9 @@
-import Landing from "@/components/Assets/Landing";
-import SearchHadith from "@/components/web/SearchHadith";
+import Landing from "@/components/layout/Landing";
+import SearchHadith from "@/components/adith/SearchHadith";
+import { optimizeString } from "@/helpers/optimizeString";
 
 export default async function _({ params }) {
     const id = params.id;
-
-
-    function optimize_string(string) {
-        if (!string) {
-            console.error("String is undefined or null");
-            return "";
-        }
-        
-        let hadith_info = string.split('<div class="hadith-info">\n')[1].split("</div>")[0];
-        string = string.replace(hadith_info, "")
-        let hadith_info_split = hadith_info.split("\n");
-
-        string += hadith_info_split.map((hadith) => 
-            hadith + "<br />"
-        ).join("").replace("<br /><br />", "");
-
-        string = string.replace("<br/>", "")
-        string = string.replace("<br>", "")
-        
-        return string;
-    }
 
     let hadiths = false;
     let showData = "";
@@ -35,7 +15,7 @@ export default async function _({ params }) {
             const data = await res.json();
             hadiths = data.ahadith.result;
             length = data.ahadith.result.length;
-            
+
             hadiths = hadiths.split("--------------");
             hadiths.pop()
             showData = hadiths.map((hadith, index) => (
@@ -43,7 +23,7 @@ export default async function _({ params }) {
                     key={index}
                     className="px-6 py-6 mb-3 font-quran shadow-[0_0_15px_rgb(0_0_0_/_5%)] border border-gray-200 rounded-md bg-white dark:bg-stone-900 dark:border dark:border-stone-600"
                 >
-                    <div dangerouslySetInnerHTML={{ __html: optimize_string(hadith) }} />
+                    <div dangerouslySetInnerHTML={{ __html: optimizeString(hadith) }} />
                 </div>
             ));
         } catch (error) {
@@ -54,7 +34,7 @@ export default async function _({ params }) {
 
     return (
         <>
-            <Landing title="اداه الباحث في الحديث"  text="يمكنك الموقع من البحث عن الأحاديث النبوية والتحقق من صحتها إنطلاقا من كلمة أو جملة من الحديث" />
+            <Landing title="اداه الباحث في الحديث" text="يمكنك الموقع من البحث عن الأحاديث النبوية والتحقق من صحتها إنطلاقا من كلمة أو جملة من الحديث" />
             <section className="py-2">
                 <SearchHadith id={id} />
                 <div className="container px-5 m-auto">

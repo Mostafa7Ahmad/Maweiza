@@ -1,6 +1,6 @@
 
 
-import SplashScreen from "@/components/Assets/SplashScreen";
+import SplashScreen from "@/components/layout/SplashScreen";
 
 export default function Loading() {
     return (<>

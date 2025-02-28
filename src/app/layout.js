@@ -1,11 +1,12 @@
 
 import "./globals.css";
 
-import Navbar from "@/components/Assets/Navbar";
-import Footer from "@/components/Assets/Footer";
-import Buttons from "@/components/Assets/Buttons";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
+import Buttons from "@/components/layout/Buttons";
 import localFont from "next/font/local";
 import Script from "next/script";
+import { SWRProvider } from "@/components/layout/SWRProvider";
 
 const cairo = localFont({
     src: [
@@ -62,20 +63,22 @@ export default function RootLayout({ children }) {
                     {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-WBZJG335');`}
                 </Script>
             </head>
-            <body className="bg-[rgb(250,250,250)] text-sm header dark:bg-[#000000f2] dark:text-white transition-colors selection:bg-lime-600 selection:text-white">
-                <iframe
-                    src="https://www.googletagmanager.com/ns.html?id=GTM-WBZJG335"
-                    height="0"
-                    width="0"
-                >
-                </iframe>
-                <main className={`${cairo.variable} relative font-cairo antialiased`}>
-                    <Navbar />
-                    {children}
-                    <Footer />
-                    <Buttons />
-                </main>
-            </body>
+            <SWRProvider>
+                <body className="bg-[rgb(250,250,250)] text-sm header dark:bg-[#000000f2] dark:text-white transition-colors selection:bg-lime-600 selection:text-white">
+                    <iframe
+                        src="https://www.googletagmanager.com/ns.html?id=GTM-WBZJG335"
+                        height="0"
+                        width="0"
+                    >
+                    </iframe>
+                    <main className={`${cairo.variable} relative font-cairo antialiased`}>
+                        <Navbar />
+                        {children}
+                        <Footer />
+                        <Buttons />
+                    </main>
+                </body>
+            </SWRProvider>
         </html>
     );
 }

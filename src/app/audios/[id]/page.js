@@ -5,14 +5,14 @@ import {
     faRecordVinyl,
 } from "@fortawesome/free-solid-svg-icons";
 
-import Landing from "@/components/Assets/Landing";
+import Landing from "@/components/layout/Landing";
 import Link from "next/link";
 
 export const metadata = {
     title: "موقع موعظه | المحاضرات الصوتيه ",
 };
 
-export default async function ({ params }) {
+export default async function _({ params }) {
     let audios = [];
     let links = [];
 
@@ -56,7 +56,7 @@ export default async function ({ params }) {
                             href={`/audios/${params.id}/${item.id}`}
                             download
                             className="flex justify-between mt-2 w-full items-center px-3 py-2 text-sm font-medium text-center text-white bg-gradient-to-r from-green-600 to-lime-500 rounded-lg  hover:scale-105 active:scale-90 transition-all"
-                            >
+                        >
                             <span> فتح الحزمة</span>
                             <FontAwesomeIcon icon={faRecordVinyl} />
                         </Link>
@@ -97,7 +97,7 @@ export default async function ({ params }) {
                         <Link
                             href={`/audios/${Number(params.id) + 1}`}
                             className="flex transition-colors flex-row justify-between py-3 px-5 border-2 border-solid bg-gray-100 dark:bg-[#323232] dark:border-stone-700 rounded-lg items-center dark:hover:border-lime-600 dark:hover:bg-lime-600 hover:bg-lime-600 hover:border-lime-600 hover:text-white"
-                            >
+                        >
                             التالي
                             <FontAwesomeIcon
                                 className="mr-2"

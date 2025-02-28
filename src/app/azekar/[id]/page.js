@@ -1,4 +1,4 @@
-import Landing from "@/components/Assets/Landing";
+import Landing from "@/components/layout/Landing";
 
 import azekar from "@/data/azekar";
 

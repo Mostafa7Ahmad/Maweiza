@@ -5,14 +5,14 @@ import {
     faDownload,
 } from "@fortawesome/free-solid-svg-icons";
 
-import Landing from "@/components/Assets/Landing";
+import Landing from "@/components/layout/Landing";
 import Link from "next/link";
 
 export const metadata = {
     title: "موقع موعظه | خطب ",
 };
 
-export default async function ({ params }) {
+export default async function _({ params }) {
     let khotab = [];
     let links = [];
 

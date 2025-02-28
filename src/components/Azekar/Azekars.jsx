@@ -3,30 +3,13 @@
 import { useState } from "react";
 import Link from "next/link";
 import azekar from "@/data/azekar";
-import Search from "../web/Search";
+import Search from "../layout/Search";
+import { optimizeString } from "@/helpers/optimizeString";
 
 export default function Azekar() {
     let [dataAzekar, setDataAzekar] = useState(azekar);
     let [massage, setMassage] = useState(false);
 
-    function optimize_string(string) {
-        let text = "";
-        let char = "";
-        for (let index = 0; index < string.length; index++) {
-            char = string[index];
-            char = char.replace("ة", "ه");
-            char = char.replace("ى", "ي");
-            char = char.replace("أ", "ا");
-            char = char.replace("إ", "ا");
-            char = char.replace("آ", "ا");
-            char = char.replace("ٱ", "ا");
-            char = char.replace(/َ|ً|ُ|ٌ|ّ|ٍ|ِ|ْ|ٰ|ٓ|ـ/g, "");
-            char = char.replace(/ۡ|ـ/g, "");
-            char = char.replace("عبد ال", "عبدال");
-            text = text + char;
-        }
-        return text;
-    }
 
     const showData = dataAzekar.map((item, key) => (
         <Link
@@ -39,7 +22,7 @@ export default function Azekar() {
 
     function handleChange(e) {
         let dataFilter = azekar.filter((item) =>
-            optimize_string(item.category).includes(optimize_string(e.target.value))
+            optimizeString(item.category).includes(optimizeString(e.target.value))
         );
         setDataAzekar(dataFilter);
         dataFilter.length === 0 ? setMassage(true) : setMassage(false);

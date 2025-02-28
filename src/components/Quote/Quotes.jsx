@@ -4,31 +4,12 @@ import Link from "next/link";
 import { useState } from "react";
 
 import quotesAll from "@/data/quotesAll.json";
-import Search from "../web/Search";
+import Search from "../layout/Search";
+import { optimizeString } from "@/helpers/optimizeString";
 
 export default function Quotes() {
     let [data, setData] = useState(quotesAll.authors);
     let [massage, setMassage] = useState(false);
-
-    function optimize_string(string) {
-        let text = "";
-        let char = "";
-        for (let index = 0; index < string.length; index++) {
-            char = string[index];
-            char = char.replace("ة", "ه");
-            char = char.replace("ى", "ي");
-            char = char.replace("أ", "ا");
-            char = char.replace("إ", "ا");
-            char = char.replace("آ", "ا");
-            char = char.replace("ٱ", "ا");
-            char = char.replace(/َ|ً|ُ|ٌ|ّ|ٍ|ِ|ْ|ٰ|ٓ|ـ/g, "");
-            char = char.replace(/ۡ|ـ/g, "");
-            char = char.replace("عبد ال", "عبدال");
-            text = text + char;
-        }
-        return text;
-    }
-
 
     let showData = data.map((item, index) => (
         <Link
@@ -44,8 +25,8 @@ export default function Quotes() {
 
     function handleChange(e) {
         let dataFilter = quotesAll.authors.filter((item) =>
-            optimize_string(item.author).includes(
-                optimize_string(e.target.value)
+            optimizeString(item.author).includes(
+                optimizeString(e.target.value)
             )
         );
         setData(dataFilter);

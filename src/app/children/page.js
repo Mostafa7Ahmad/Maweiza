@@ -1,5 +1,5 @@
-import { faPenRuler } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import Image from "next/image";
 import Link from "next/link";
 
 export default async function _() {
@@ -7,10 +7,7 @@ export default async function _() {
         <section className="py-40 pb-30 h-100">
             <div className="px-4 mx-auto max-w-screen-xl">
                 <div className="mx-auto max-w-screen-sm text-center">
-                    <FontAwesomeIcon
-                        className="text-gray-500 text-6xl mb-3 dark:text-gray-400"
-                        icon={faPenRuler}
-                    />
+                    <Image src="/work.png" height={200} width={200} className="mx-auto" alt="" />
                     <h1 className="text-3xl text-primary-600 dark:text-primary-500 mb-3 ">
                         جاري العمل علي هذا القسم
                     </h1>

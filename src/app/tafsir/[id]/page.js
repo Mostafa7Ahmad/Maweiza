@@ -1,6 +1,7 @@
-import Landing from "@/components/Assets/Landing";
+import Landing from "@/components/layout/Landing";
+import { optimizeString } from "@/helpers/optimizeString";
 
-export default async function ({ params }) {
+export default async function _({ params }) {
     const id = params.id;
 
     let dataSuaruh = [];
@@ -10,56 +11,22 @@ export default async function ({ params }) {
     let dataFadluha = "";
     let dataSababNuzuliha = "";
 
-    function optimize_string(string) {
-        let text = "";
-        let char = "";
-        for (let index = 0; index < string.length; index++) {
-            char = string[index];
-            char = char.replace("ة", "ه");
-            char = char.replace("ى", "ي");
-            char = char.replace("أ", "ا");
-            char = char.replace("إ", "ا");
-            char = char.replace("آ", "ا");
-            char = char.replace("ٱ", "ا");
-            char = char.replace(/َ|ً|ُ|ٌ|ّ|ٍ|ِ|ْ|ٰ|ٓ|ـ/g, "");
-            char = char.replace(/ۡ|ـ/g, "");
-            char = char.replace("عبد ال", "عبدال");
-            text = text + char;
-        }
-        return text;
-    }
-
-    
     try {
-        const responseSuaruh = await fetch(
-            `https://api.alquran.cloud/v1/surah/${id}`
-        );
+        const responseSuaruh = await fetch(`https://api.alquran.cloud/v1/surah/${id}`);
         dataSuaruh = await responseSuaruh.json();
 
-        const responseTafsir = await fetch(
-            `https://quranenc.com/api/v1/translation/sura/arabic_moyassar/${id}`
-        );
+        const responseTafsir = await fetch(`https://quranenc.com/api/v1/translation/sura/arabic_moyassar/${id}`);
         dataTafsir = await responseTafsir.json();
 
-        const responseAalbitaqat = await fetch(
-            `https://raw.githubusercontent.com/Alsarmad/albitaqat_quran/main/albitaqat.json`
-        );
+        const responseAalbitaqat = await fetch(`https://raw.githubusercontent.com/Alsarmad/albitaqat_quran/main/albitaqat.json`);
         const dataAalbitaqat = await responseAalbitaqat.json();
         const albitaqatData = dataAalbitaqat[id - 1];
 
         dataAlbitaqat = albitaqatData;
-        dataFadluha = albitaqatData.fadluha.map((fadluha, index) => (
-            <span key={index}>
-                {fadluha} <br />
-            </span>
-        ));
-        dataSababNuzuliha = albitaqatData.munasabatiha.map(
-            (sababNuzuliha, index) => (
-                <span key={index}>
-                    {sababNuzuliha} <br />
-                </span>
-            )
-        );
+
+        dataFadluha = albitaqatData.fadluha.map((fadluha, index) => (<span key={index}>{fadluha} <br /></span>));
+
+        dataSababNuzuliha = albitaqatData.munasabatiha.map((sababNuzuliha, index) => (<span key={index}>{sababNuzuliha} <br /></span>));
     } catch (error) {
         console.log(error);
     }
@@ -85,10 +52,7 @@ export default async function ({ params }) {
 
     return (
         <>
-            <Landing
-                title={optimize_string(dataSuaruh.data.name)}
-                text=""
-            />
+            <Landing title={optimizeString(dataSuaruh.data.name)} text="" />
             <section className="py-10 relative px-4">
                 <h2 className="text-xl md:text-2xl mb-10 w-fit m-auto relative before:w-10 before:bg-lime-600 before:h-1 before:absolute before:top-1/2 before:right-full before:-translate-x-5 after:w-10 after:bg-lime-600 after:h-1 after:absolute after:top-1/2 after:left-full after:translate-x-5">
                     معلومات عن السوره
