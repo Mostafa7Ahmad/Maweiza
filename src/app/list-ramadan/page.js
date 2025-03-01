@@ -131,7 +131,7 @@ export default function Page() {
     return (
         <>
             <Landing title={`يومي في رمضان (${moment().iYear()} هـ - ${moment().year()} م)`} />
-            <div className="container mx-auto mb-5">
+            <div className="container mx-auto mb-5 px-2">
                 <div className="bg-green-50 dark:bg-zinc-700 p-4 rounded-lg mb-4">
                     <h3 className="text-xl font-bold text-green-800 dark:text-white">
                         معلومات رمضان الحالية:
@@ -166,7 +166,7 @@ export default function Page() {
                     </div>
 
                     <div className="overflow-x-auto rounded-sm shadow-sm border border-green-50 dark:border-zinc-700">
-                        <table className="w-full border-collapse text-sm md:text-base bg-white dark:bg-black">
+                        <table className="w-full border-collapse text-sm md:text-base bg-white dark:bg-black whitespace-nowrap">
                             <thead className="sticky top-0">
                                 <tr className="bg-green-600 text-white text-center">
                                     <span></span>

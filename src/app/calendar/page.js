@@ -138,7 +138,7 @@ const RamadanSchedule = () => {
     }
 
     return (
-        <div className="container mx-auto mb-5">
+        <div className="container mx-auto mb-5 px-2">
             <div className="mt-5">
                 <div className="mx-auto p-10 bg-gradient-to-br from-green-900 to-green-600 rounded-2xl shadow-lg">
                     <div className="flex flex-col md:flex-row justify-between items-center gap-6">
@@ -165,7 +165,7 @@ const RamadanSchedule = () => {
             </div>
 
             <div className="mt-8 overflow-x-auto rounded-lg border border-gray-200 dark:border-gray-700">
-                <table className="w-full">
+                <table className="w-full whitespace-nowrap">
                     <thead className="bg-green-600 text-white">
                         <tr>
                             {["اليوم", "التاريخ الميلادي", "التاريخ الهجري", "السحور", "الإفطار"].map((h, i) => (
