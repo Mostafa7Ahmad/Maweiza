@@ -63,7 +63,7 @@ const RamadanSchedule = () => {
                 if (!response.ok) throw new Error('فشل جلب البيانات');
                 const { data } = await response.json();
 
-                const ramadanDays = data
+                const ramadanDays = data.filter(monthData => monthData.date.hijri.month.number === 9)
 
                 if (!ramadanDays.length) throw new Error('لا توجد بيانات لرمضان');
 

@@ -20,12 +20,14 @@ export default function Categories() {
                         </span>}
                         <div className="animate-border-beam"></div>
                         <div className="m-5 overflow-hidden rounded-md">
-                            <Image quality={20} src={item.img} loading="lazy" className="object-contain m-auto" width={170} height={170} alt="" />
+                            <Image quality={20} src={item.img} loading="lazy" className="object-contain m-auto" width={170} height={170} alt={item.name} />
                         </div>
                         <Link
                             className="flex justify-center rounded-md m-5 p-3 text-white bg-gradient-to-r from-green-600 to-lime-500 hover:scale-105 active:scale-90 transition-all"
                             href={`${item.path}`}>
-                            {item.name}
+                            <h2>
+                                {item.name}
+                            </h2>
                         </Link>
                     </div>
                 </div>
@@ -40,7 +42,9 @@ export default function Categories() {
                         <Link
                             className="flex justify-center rounded-md m-5 p-3 text-white bg-gradient-to-r from-green-600 to-lime-500 hover:scale-105 active:scale-90 transition-all"
                             href={`${item.path}`}>
-                            {item.name}
+                            <h2>
+                                {item.name}
+                            </h2>
                         </Link>
                     </div>
                 </div>

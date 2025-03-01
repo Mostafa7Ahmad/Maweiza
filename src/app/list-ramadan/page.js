@@ -7,6 +7,8 @@ import SplashScreen from "@/components/Layout/SplashScreen";
 // import moment from "moment";
 import moment from 'moment-hijri';
 import { useRamadan } from "@/context/ramadanContext";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faClose, faLock } from "@fortawesome/free-solid-svg-icons";
 
 export default function Page() {
     const { ramadan } = useRamadan();
@@ -64,12 +66,13 @@ export default function Page() {
         const fetchRamadanDates = async () => {
             try {
                 const currentYear = new Date().getFullYear();
-                const url = `https://api.aladhan.com/v1/calendar?latitude=${location.lat}&longitude=${location.lng}&year=${currentYear}&method=2`;
+                const apiUrl = `https://api.aladhan.com/v1/calendar?latitude=${location.lat}&longitude=${location.lng}&year=${currentYear}&method=2`;
 
-                const response = await fetch(url);
-                const data = await response.json();
+                const response = await fetch(apiUrl);
+                if (!response.ok) throw new Error('فشل جلب البيانات');
+                const { data } = await response.json();
 
-                const ramadanDays = data.data;
+                const ramadanDays = data.filter(monthData => monthData.date.hijri.month.number === 9)
 
                 if (ramadanDays.length > 0) {
                     const firstDay = moment(ramadanDays[0].date.gregorian.date, "DD-MM-YYYY", true).toDate();
@@ -116,6 +119,12 @@ export default function Page() {
         return Math.max(1, Math.min(day, ramadanInfo.totalDays));
     };
 
+    const [currentRamadanDay, setCurrentRamadanDay] = useState(getCurrentRamadanDay());
+
+    useEffect(() => {
+        setCurrentRamadanDay(getCurrentRamadanDay());
+    }, [ramadanInfo.start]);
+
     if (isLoading) return <SplashScreen />;
     if (!ramadan) return null;
 
@@ -160,6 +169,7 @@ export default function Page() {
                         <table className="w-full border-collapse text-sm md:text-base bg-white dark:bg-black">
                             <thead className="sticky top-0">
                                 <tr className="bg-green-600 text-white text-center">
+                                    <span></span>
                                     <th className="p-3 font-semibold border-b border-green-500">اليوم</th>
                                     <th className="p-3 font-semibold border-b border-green-500">العبادات اليومية</th>
                                     <th className="p-3 font-semibold border-b border-green-500">النوافل</th>
@@ -174,14 +184,23 @@ export default function Page() {
                                     const dayNumber = i + 1;
                                     if (selectedDay !== "all" && dayNumber !== Number(selectedDay)) return null;
 
+
                                     return (
                                         <tr
                                             key={i}
-                                            className={`hover:bg-green-50 ${i % 2 === 0 ? "bg-green-50/30 dark:bg-zinc-800" : "bg-white dark:bg-black"}`}
+                                            className={`hover:bg-green-50 relative ${i % 2 === 0 ? "bg-green-50/30 dark:bg-zinc-800" : "bg-white dark:bg-black"}`}
                                         >
+                                            {
+                                                dayNumber > currentRamadanDay ?
+                                                    <span className="absolute z-10 flex items-center gap-3 justify-center top-0 w-full text-white h-full bg-black/60">
+                                                        يوم {dayNumber} - سيتم تفعيله عند دخول وقته
+                                                        <FontAwesomeIcon icon={faLock} />
+                                                    </span> : <span></span>
+                                            }
                                             <td className="p-3 text-center font-medium text-green-600 border-r dark:border-zinc-500">
                                                 {dayNumber} رمضان
                                             </td>
+
 
                                             {/* الصلوات المفروضة */}
                                             <td className="p-3 border-r dark:border-zinc-500">
